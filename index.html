@@ -176,6 +176,7 @@
         .social-link.facebook:hover { background-color: #1877F2; }
         .social-link.twitter:hover { background-color: #000000; }
         .social-link.linkedin:hover { background-color: #0A66C2; }
+        .social-link.mail:hover { background-color: #ea4335; }
 
         /* ---------------------------------------------------- */
         /* NAVIGATION BAR                                       */
@@ -1308,166 +1309,114 @@
         }
 
         /* ---------------------------------------------------- */
-        /* DIRECT ENGAGEMENT & CONTACT FORM SECTION             */
+        /* CLIENT COMPANY SLIDESHOW / CAROUSEL SECTION          */
         /* ---------------------------------------------------- */
-        .contact-section {
+        .client-slideshow-section {
             background-color: #f1f5f9;
-            padding: 90px 8%;
+            padding: 80px 8%;
             border-bottom: 1px solid var(--border-color);
+            overflow: hidden;
         }
 
-        .contact-container {
+        .client-slideshow-container {
             max-width: 1200px;
             margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr 1.1fr;
-            gap: 60px;
-            align-items: center;
         }
 
-        .contact-left {
-            display: flex;
-            flex-direction: column;
+        .client-header {
+            text-align: center;
+            margin-bottom: 40px;
         }
 
-        .contact-tag {
+        .client-tag {
             font-size: 11px;
             font-weight: 800;
             text-transform: uppercase;
             letter-spacing: 1.5px;
             color: #0284c7;
-            margin-bottom: 16px;
+            margin-bottom: 8px;
             display: block;
         }
 
-        .contact-title {
-            font-size: 38px;
+        .client-title {
+            font-size: 32px;
             font-weight: 800;
             color: #0f172a;
-            line-height: 1.15;
-            letter-spacing: -0.8px;
-            margin-bottom: 20px;
+            line-height: 1.25;
+            letter-spacing: -0.5px;
         }
 
-        .contact-desc {
-            font-size: 14px;
-            color: #64748b;
-            line-height: 1.7;
-            margin-bottom: 36px;
-        }
-
-        .contact-info-list {
+        /* Infinite Horizontal Carousel */
+        .logo-slider {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            padding: 20px 0;
             display: flex;
-            flex-direction: column;
-            gap: 18px;
         }
 
-        .contact-info-item {
+        .logo-slider::before,
+        .logo-slider::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            width: 100px;
+            height: 100%;
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        .logo-slider::before {
+            left: 0;
+            background: linear-gradient(to right, #f1f5f9 0%, transparent 100%);
+        }
+
+        .logo-slider::after {
+            right: 0;
+            background: linear-gradient(to left, #f1f5f9 0%, transparent 100%);
+        }
+
+        .logo-track {
             display: flex;
-            align-items: center;
-            gap: 14px;
-            font-size: 13.5px;
-            font-weight: 600;
-            color: #334155;
+            gap: 40px;
+            width: max-content;
+            animation: scrollLogos 25s linear infinite;
         }
 
-        .contact-info-icon {
-            width: 32px;
-            height: 32px;
-            border-radius: 8px;
-            background-color: #e0f2fe;
-            color: #0284c7;
+        .logo-track:hover {
+            animation-play-state: paused;
+        }
+
+        @keyframes scrollLogos {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        .logo-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 20px 32px;
             display: flex;
             align-items: center;
             justify-content: center;
-            flex-shrink: 0;
+            min-width: 180px;
+            height: 90px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
         }
 
-        .contact-info-icon svg {
-            width: 16px;
-            height: 16px;
+        .logo-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
         }
 
-        .contact-form-card {
-            background-color: #ffffff;
-            border-radius: 16px;
-            padding: 36px 32px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
-            border: 1px solid #e2e8f0;
-        }
-
-        .form-grid-2 {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 18px;
-            margin-bottom: 18px;
-        }
-
-        .form-group {
-            display: flex;
-            flex-direction: column;
-            gap: 6px;
-            margin-bottom: 18px;
-        }
-
-        .form-group.no-margin {
-            margin-bottom: 0;
-        }
-
-        .form-label {
-            font-size: 10.5px;
+        .client-logo-text {
+            font-size: 16px;
             font-weight: 800;
+            color: #334155;
+            letter-spacing: 0.5px;
             text-transform: uppercase;
-            letter-spacing: 0.8px;
-            color: #475569;
-        }
-
-        .form-input, .form-select, .form-textarea {
-            width: 100%;
-            padding: 12px 14px;
-            border: 1px solid #cbd5e1;
-            border-radius: 6px;
-            font-size: 13px;
-            color: #0f172a;
-            outline: none;
-            background-color: #ffffff;
-            transition: border-color 0.2s ease, box-shadow 0.2s ease;
-        }
-
-        .form-input:focus, .form-select:focus, .form-textarea:focus {
-            border-color: #0284c7;
-            box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.12);
-        }
-
-        .form-input::placeholder, .form-textarea::placeholder {
-            color: #94a3b8;
-        }
-
-        .form-textarea {
-            resize: vertical;
-            min-height: 90px;
-        }
-
-        .btn-submit {
-            width: 100%;
-            background-color: #008ba3;
-            color: #ffffff;
-            padding: 14px;
-            border: none;
-            border-radius: 6px;
-            font-weight: 800;
-            font-size: 13px;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            cursor: pointer;
-            transition: background-color 0.25s ease, transform 0.15s ease;
-            box-shadow: 0 4px 14px rgba(0, 139, 163, 0.3);
-            margin-top: 6px;
-        }
-
-        .btn-submit:hover {
-            background-color: #00778c;
-            transform: translateY(-1px);
         }
 
         /* ---------------------------------------------------- */
@@ -1541,7 +1490,6 @@
             .services-grid { grid-template-columns: repeat(2, 1fr); }
             .iot-hub-container { grid-template-columns: 1fr; gap: 40px; }
             .insights-grid { grid-template-columns: 1fr; }
-            .contact-container { grid-template-columns: 1fr; gap: 40px; }
         }
 
         @media (max-width: 992px) {
@@ -1631,9 +1579,8 @@
             .insights-section { padding: 50px 5%; }
             .insights-title { font-size: 26px; }
 
-            .contact-section { padding: 50px 5%; }
-            .contact-title { font-size: 28px; }
-            .form-grid-2 { grid-template-columns: 1fr; gap: 0; }
+            .client-slideshow-section { padding: 50px 5%; }
+            .client-title { font-size: 24px; }
 
             .stats {
                 flex-direction: column;
@@ -1695,6 +1642,10 @@
             <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
             <span>LinkedIn</span>
         </a>
+        <a href="mailto:contact@motleygroup.in" class="social-link mail" aria-label="Send Email">
+            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            <span>Email Us</span>
+        </a>
     </aside>
 
     <!-- NAVIGATION BAR -->
@@ -1725,9 +1676,10 @@
                 </a>
             </li>
             <li><a href="#blog">Blog</a></li>
+            <li><a href="#clients">Clients</a></li>
         </ul>
 
-        <a href="mailto:contact@motleygroup.com" class="btn-audit">Book an<br>Audit</a>
+        <a href="mailto:contact@motleygroup.in" class="btn-audit">Book an<br>Audit</a>
     </nav>
 
     <!-- HERO BANNER SECTION WITH BACKGROUND SLIDESHOW -->
@@ -1762,12 +1714,12 @@
                 
                 <p>
                     Industrial Water Solutions,
-                    Vision AI Fire Safety &
+                    Vision AI Fire Safety &amp;
                     Audits, ESG Compliances
                 </p>
                 
                 <div class="hero-buttons">
-                    <a href="mailto:contact@motleygroup.com" class="btn-cyan">Schedule Plant Audit</a>
+                    <a href="mailto:contact@motleygroup.in" class="btn-cyan">Schedule Plant Audit</a>
                     <a href="#ai-fire-safety" class="btn-pink">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path>
@@ -2015,7 +1967,7 @@
                     <h4>Pilot Test AI Fire Safety on 2 Cameras for 7 Days</h4>
                     <p>Experience real-time flame alerts, false-alarm suppression, and instant WhatsApp notifications at zero initial risk.</p>
                 </div>
-                <a href="mailto:contact@motleygroup.com" class="btn-pilot">Request 7-Day Pilot Run</a>
+                <a href="mailto:contact@motleygroup.in" class="btn-pilot">Request 7-Day Pilot Run</a>
             </div>
         </div>
     </section>
@@ -2319,88 +2271,34 @@
         </div>
     </section>
 
-    <!-- DIRECT ENGAGEMENT & CONTACT FORM SECTION -->
-    <section class="contact-section" id="contact">
-        <div class="contact-container">
-            <div class="contact-left">
-                <span class="contact-tag">DIRECT ENGAGEMENT</span>
-                <h2 class="contact-title">Schedule Your Facility Audit or Inquire for Solutions.</h2>
-                <p class="contact-desc">Connect directly with our technical team to design your wastewater system, test an AI Fire pilot, or establish a turnkey statutory compliance retainer.</p>
-
-                <div class="contact-info-list">
-                    <div class="contact-info-item">
-                        <div class="contact-info-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                                <circle cx="12" cy="10" r="3"></circle>
-                            </svg>
-                        </div>
-                        <span>Industrial Area, Panki / Dada Nagar, Kanpur (UP)</span>
-                    </div>
-
-                    <div class="contact-info-item">
-                        <div class="contact-info-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                                <polyline points="22,6 12,13 2,6"></polyline>
-                            </svg>
-                        </div>
-                        <span>contact@motleygroup.com</span>
-                    </div>
-
-                    <div class="contact-info-item">
-                        <div class="contact-info-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                            </svg>
-                        </div>
-                        <span>+91 8299288481</span>
-                    </div>
-                </div>
+    <!-- CLIENT COMPANY SLIDESHOW / CAROUSEL SECTION -->
+    <section class="client-slideshow-section" id="clients">
+        <div class="client-slideshow-container">
+            <div class="client-header">
+                <span class="client-tag">TRUSTED INDUSTRY PARTNERS</span>
+                <h2 class="client-title">Companies Powered &amp; Audited by Motley Group</h2>
             </div>
 
-            <!-- Inquiry Form -->
-            <div class="contact-form-card">
-                <form action="#" method="POST">
-                    <div class="form-grid-2">
-                        <div class="form-group">
-                            <label class="form-label">First Name</label>
-                            <input type="text" class="form-input" placeholder="John" required>
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label">Last Name</label>
-                            <input type="text" class="form-input" placeholder="Doe" required>
-                        </div>
-                    </div>
+            <div class="logo-slider">
+                <div class="logo-track">
+                    <!-- Duplicate set of logos for infinite smooth scroll -->
+                    <div class="logo-card"><span class="client-logo-text">TATA MOTORS</span></div>
+                    <div class="logo-card"><span class="client-logo-text">RELIANCE</span></div>
+                    <div class="logo-card"><span class="client-logo-text">L&amp;T INDUSTRIAL</span></div>
+                    <div class="logo-card"><span class="client-logo-text">ADANI WILMAR</span></div>
+                    <div class="logo-card"><span class="client-logo-text">SIEMENS</span></div>
+                    <div class="logo-card"><span class="client-logo-text">ITC LIMITED</span></div>
+                    <div class="logo-card"><span class="client-logo-text">BPCL</span></div>
 
-                    <div class="form-grid-2">
-                        <div class="form-group">
-                            <label class="form-label">Work Email</label>
-                            <input type="email" class="form-input" placeholder="john@company.com" required>
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label">Phone Number</label>
-                            <input type="tel" class="form-input" placeholder="+91 98765 43210" required>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label class="form-label">Inquiry Area</label>
-                        <select class="form-select">
-                            <option value="audit">Schedule Facility Audit</option>
-                            <option value="water">Industrial Water Treatment (RO/ETP/STP/ZLD)</option>
-                            <option value="fire">Vision AI Fire Safety System</option>
-                            <option value="iot">IoT Telemetry &amp; Digital Logbooks</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label class="form-label">Message / Facility Details</label>
-                        <textarea class="form-textarea" placeholder="Tell us about your facility location and specific requirements..."></textarea>
-                    </div>
-
-                    <button type="submit" class="btn-submit">Submit Inquiry</button>
-                </form>
+                    <!-- Repeated set for seamless loop -->
+                    <div class="logo-card"><span class="client-logo-text">TATA MOTORS</span></div>
+                    <div class="logo-card"><span class="client-logo-text">RELIANCE</span></div>
+                    <div class="logo-card"><span class="client-logo-text">L&amp;T INDUSTRIAL</span></div>
+                    <div class="logo-card"><span class="client-logo-text">ADANI WILMAR</span></div>
+                    <div class="logo-card"><span class="client-logo-text">SIEMENS</span></div>
+                    <div class="logo-card"><span class="client-logo-text">ITC LIMITED</span></div>
+                    <div class="logo-card"><span class="client-logo-text">BPCL</span></div>
+                </div>
             </div>
         </div>
     </section>
@@ -2434,11 +2332,12 @@
                 <p><a href="#products">Products &amp; Water Solutions</a></p>
                 <p><a href="#ai-fire-safety">Vision AI Fire Safety</a></p>
                 <p><a href="#services">Services &amp; Audits</a></p>
+                <p><a href="#clients">Client Showcase</a></p>
             </div>
             <div class="footer-col">
                 <h4>Contact</h4>
                 <p>Industrial Area, Panki / Dada Nagar, Kanpur (UP)</p>
-                <p>Email: contact@motleygroup.com</p>
+                <p>Email: contact@motleygroup.in</p>
                 <p>Phone: +91 8299288481</p>
             </div>
         </div>
