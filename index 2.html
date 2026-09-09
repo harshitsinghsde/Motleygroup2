@@ -1,0 +1,2449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motley Group - Global Industrial Solutions</title>
+    <style>
+        /* CSS Reset & Variable Setup */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+
+        :root {
+            --primary-blue: #00529b;
+            --dark-blue: #002f6c;
+            --black: #111111;
+            --gray: #4a4a4a;
+            --light-gray: #f8fafc;
+            --border-color: #e2e8f0;
+            --accent-green: #2e7d32;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            color: var(--black);
+            line-height: 1.6;
+            background-color: #ffffff;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* ---------------------------------------------------- */
+        /* TOP ANNOUNCEMENT / HEADER BANNER                     */
+        /* ---------------------------------------------------- */
+        .top-bar {
+            background-color: #030712;
+            color: #94a3b8;
+            font-size: 13px;
+            padding: 10px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            position: relative;
+            z-index: 1001;
+        }
+
+        .top-bar-left {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+        }
+
+        .top-bar-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .top-bar-item svg {
+            width: 15px;
+            height: 15px;
+            flex-shrink: 0;
+        }
+
+        .top-bar-item.blue svg { stroke: #00a3ff; }
+        .top-bar-item.red svg { stroke: #ff4d4d; }
+
+        .top-bar-right {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
+
+        .top-bar-right a {
+            color: #cbd5e1;
+            transition: color 0.2s ease;
+        }
+
+        .top-bar-right a:hover {
+            color: #ffffff;
+        }
+
+        .client-vault-link {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            color: #00d2ff !important;
+            font-weight: 600;
+        }
+
+        .client-vault-link svg {
+            width: 15px;
+            height: 15px;
+            stroke: #00d2ff;
+        }
+
+        .top-bar-divider {
+            color: rgba(255, 255, 255, 0.2);
+        }
+
+        /* ---------------------------------------------------- */
+        /* FLOATING SIDEBAR CONTACT BUTTONS                      */
+        /* ---------------------------------------------------- */
+        .social-sidebar {
+            position: fixed;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            width: 48px;
+            height: 48px;
+            background-color: rgba(11, 19, 32, 0.88);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            color: #ffffff;
+            border-top-left-radius: 24px;
+            border-bottom-left-radius: 24px;
+            box-shadow: -4px 8px 20px rgba(0, 0, 0, 0.12);
+            overflow: hidden;
+            white-space: nowrap;
+            padding-left: 13px;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-right: none;
+            cursor: pointer;
+            transition: width 0.35s ease, transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .social-link svg {
+            width: 22px;
+            height: 22px;
+            fill: #ffffff;
+            flex-shrink: 0;
+            transition: transform 0.3s ease;
+        }
+
+        .social-link span {
+            font-size: 13px;
+            font-weight: 600;
+            margin-left: 14px;
+            opacity: 0;
+            letter-spacing: 0.5px;
+            transition: opacity 0.3s ease;
+        }
+
+        .social-link:hover {
+            width: 155px;
+            transform: translateX(-4px);
+        }
+
+        .social-link:hover span {
+            opacity: 1;
+        }
+
+        .social-link.whatsapp:hover { background-color: #25D366; }
+        .social-link.facebook:hover { background-color: #1877F2; }
+        .social-link.twitter:hover { background-color: #000000; }
+        .social-link.linkedin:hover { background-color: #0A66C2; }
+
+        /* ---------------------------------------------------- */
+        /* NAVIGATION BAR                                       */
+        /* ---------------------------------------------------- */
+        .navbar {
+            background-color: #ffffff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 14px 8%;
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            cursor: pointer;
+        }
+
+        .logo-img {
+            height: 40px;
+            width: auto;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .logo-title {
+            font-size: 20px;
+            font-weight: 800;
+            color: #0b1320;
+            letter-spacing: 1px;
+            line-height: 1;
+        }
+
+        .logo-subtitle {
+            font-size: 9px;
+            color: var(--gray);
+            letter-spacing: 1px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-top: 3px;
+            line-height: 1;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 28px;
+        }
+
+        .nav-links li a {
+            font-weight: 600;
+            font-size: 14px;
+            color: #334155;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links li a:hover {
+            color: #0284c7;
+        }
+
+        .nav-links li a.highlight-red {
+            color: #e11d48;
+        }
+
+        .nav-links li a.highlight-red:hover {
+            color: #be123c;
+        }
+
+        .nav-links li a.highlight-cyan {
+            color: #0284c7;
+        }
+
+        .badge-new {
+            background-color: #ffe4e6;
+            color: #e11d48;
+            font-size: 10px;
+            font-weight: 800;
+            padding: 3px 8px;
+            border-radius: 12px;
+            letter-spacing: 0.5px;
+        }
+
+        .dot-indicator {
+            width: 7px;
+            height: 7px;
+            background-color: #38bdf8;
+            border-radius: 50%;
+            display: inline-block;
+            margin-left: 2px;
+        }
+
+        .btn-audit {
+            background-color: #0b1320;
+            color: #ffffff;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 1.2;
+            text-align: center;
+            transition: all 0.25s ease;
+            box-shadow: 0 4px 12px rgba(11, 19, 32, 0.15);
+        }
+
+        .btn-audit:hover {
+            background-color: #1e293b;
+            transform: translateY(-1px);
+        }
+
+        /* ---------------------------------------------------- */
+        /* HERO BANNER SECTION & SLIDESHOW                      */
+        /* ---------------------------------------------------- */
+        .hero {
+            background-color: #080d19;
+            color: #ffffff;
+            padding: 80px 8% 100px 8%;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Hero Slideshow Background Container */
+        .hero-slideshow {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        .hero-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            animation: slideAnimation 12s infinite ease-in-out;
+        }
+
+        .hero-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(0.7) contrast(1.1);
+        }
+
+        .hero-slide:nth-child(1) { animation-delay: 0s; }
+        .hero-slide:nth-child(2) { animation-delay: 4s; }
+        .hero-slide:nth-child(3) { animation-delay: 8s; }
+
+        @keyframes slideAnimation {
+            0% { opacity: 0; transform: scale(1); }
+            8% { opacity: 1; }
+            33% { opacity: 1; }
+            41% { opacity: 0; transform: scale(1.05); }
+            100% { opacity: 0; }
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 80% 20%, rgba(14, 165, 233, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 20% 80%, rgba(244, 63, 94, 0.1) 0%, transparent 50%),
+                linear-gradient(180deg, rgba(8, 13, 25, 0.35) 0%, rgba(8, 13, 25, 0.65) 100%);
+            z-index: 2;
+        }
+
+        .hero-container {
+            max-width: 1300px;
+            margin: 0 auto;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 60px;
+            align-items: center;
+            position: relative;
+            z-index: 3;
+        }
+
+        .hero-content {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(14, 165, 233, 0.15);
+            border: 1px solid rgba(14, 165, 233, 0.4);
+            backdrop-filter: blur(8px);
+            border-radius: 30px;
+            padding: 6px 14px;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            color: #38bdf8;
+            margin-bottom: 28px;
+        }
+
+        .hero-badge-dot {
+            width: 6px;
+            height: 6px;
+            background-color: #38bdf8;
+            border-radius: 50%;
+            box-shadow: 0 0 8px #38bdf8;
+        }
+
+        .hero h1 {
+            font-size: 50px;
+            font-weight: 800;
+            line-height: 1.12;
+            letter-spacing: -1px;
+            color: #ffffff;
+            margin-bottom: 22px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .text-gradient-red-blue {
+            background: linear-gradient(135deg, #ff4b72 0%, #38bdf8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 15px;
+            line-height: 1.7;
+            color: #cbd5e1;
+            margin-bottom: 35px;
+            max-width: 580px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 50px;
+            width: 100%;
+        }
+
+        .btn-cyan {
+            background: #00bcd4;
+            color: #030712;
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 14px;
+            letter-spacing: 0.2px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            box-shadow: 0 4px 20px rgba(0, 188, 212, 0.3);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn-cyan:hover {
+            background: #26c6da;
+            transform: translateY(-2px);
+        }
+
+        .btn-pink {
+            background: #ff2a5f;
+            color: #ffffff;
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 14px;
+            letter-spacing: 0.2px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            box-shadow: 0 4px 20px rgba(255, 42, 95, 0.3);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .btn-pink:hover {
+            background: #ff4373;
+            transform: translateY(-2px);
+        }
+
+        .hero-stats-row {
+            display: flex;
+            gap: 45px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+            width: 100%;
+        }
+
+        .hero-stat-item h3 {
+            font-size: 22px;
+            font-weight: 800;
+            margin-bottom: 4px;
+            line-height: 1;
+        }
+
+        .hero-stat-item h3.pink-text { color: #ff4b72; }
+        .hero-stat-item h3.cyan-text { color: #38bdf8; }
+        .hero-stat-item h3.white-text { color: #ffffff; }
+
+        .hero-stat-item p {
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #94a3b8;
+            margin: 0;
+        }
+
+        /* Live Dashboard Telemetry Card */
+        .hero-widget {
+            background: rgba(13, 22, 38, 0.85);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 14px;
+            padding: 24px;
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .widget-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 12px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .widget-title {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            color: #cbd5e1;
+        }
+
+        .widget-title-dot {
+            width: 8px;
+            height: 8px;
+            background-color: #10b981;
+            border-radius: 50%;
+            box-shadow: 0 0 10px #10b981;
+        }
+
+        .widget-badge {
+            background: rgba(14, 165, 233, 0.15);
+            border: 1px solid rgba(14, 165, 233, 0.3);
+            color: #38bdf8;
+            font-size: 10px;
+            font-weight: 700;
+            padding: 3px 8px;
+            border-radius: 4px;
+            letter-spacing: 1px;
+        }
+
+        .telemetry-card {
+            background: rgba(8, 14, 26, 0.85);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 8px;
+            padding: 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .telemetry-info h4 {
+            font-size: 13px;
+            font-weight: 700;
+            color: #f1f5f9;
+            margin-bottom: 2px;
+        }
+
+        .telemetry-info p {
+            font-size: 11px;
+            color: #94a3b8;
+            margin: 0;
+        }
+
+        .status-pill {
+            font-size: 11px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 4px;
+        }
+
+        .status-pill.green {
+            color: #34d399;
+            background: rgba(52, 211, 153, 0.1);
+        }
+
+        .status-pill.cyan {
+            color: #38bdf8;
+            background: rgba(56, 189, 248, 0.1);
+        }
+
+        /* ---------------------------------------------------- */
+        /* COMPANY VISION, MISSION & PRODUCTS SECTIONS          */
+        /* ---------------------------------------------------- */
+        .info-section {
+            background-color: #f8fafc;
+            padding: 90px 8%;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .info-container {
+            max-width: 1150px;
+            margin: 0 auto;
+        }
+
+        .info-header {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-tag {
+            font-size: 11px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #0284c7;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .section-title-large {
+            font-size: 32px;
+            font-weight: 800;
+            color: #0f172a;
+            letter-spacing: -0.5px;
+            margin-bottom: 10px;
+        }
+
+        .section-desc {
+            font-size: 14px;
+            color: #64748b;
+            max-width: 680px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .cards-grid-2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+
+        .info-card {
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 36px 32px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .info-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+        }
+
+        .card-icon {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .card-icon.cyan {
+            background-color: #e0f2fe;
+            color: #0284c7;
+        }
+
+        .card-icon.green {
+            background-color: #dcfce7;
+            color: #16a34a;
+        }
+
+        .card-icon svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        .info-card h3 {
+            font-size: 20px;
+            font-weight: 800;
+            color: #0f172a;
+            margin-bottom: 12px;
+        }
+
+        .info-card p {
+            font-size: 13.5px;
+            color: #64748b;
+            line-height: 1.75;
+        }
+
+        .product-sub-desc {
+            font-size: 13px;
+            color: #64748b;
+            margin-bottom: 24px;
+            line-height: 1.6;
+        }
+
+        .product-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .product-item {
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+        }
+
+        .product-check-icon {
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background-color: #e0f2fe;
+            color: #0284c7;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .product-check-icon svg {
+            width: 13px;
+            height: 13px;
+        }
+
+        .product-text h4 {
+            font-size: 14.5px;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 3px;
+        }
+
+        .product-text p {
+            font-size: 12.5px;
+            color: #64748b;
+            line-height: 1.6;
+        }
+
+        /* ---------------------------------------------------- */
+        /* VISION AI EARLY FIRE & HAZARD DETECTION SECTION      */
+        /* ---------------------------------------------------- */
+        .ai-fire-section {
+            background-color: #080d1a;
+            color: #ffffff;
+            padding: 90px 8%;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .ai-fire-container {
+            max-width: 1150px;
+            margin: 0 auto;
+        }
+
+        .ai-fire-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .ai-fire-tag {
+            font-size: 11px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #ff4b72;
+            display: block;
+            margin-bottom: 12px;
+        }
+
+        .ai-fire-title {
+            font-size: 36px;
+            font-weight: 800;
+            color: #ffffff;
+            letter-spacing: -0.5px;
+            margin-bottom: 12px;
+        }
+
+        .ai-fire-desc {
+            font-size: 14px;
+            color: #94a3b8;
+            max-width: 720px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .ai-fire-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-bottom: 30px;
+        }
+
+        .ai-fire-card {
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 14px;
+            padding: 32px 28px;
+            transition: all 0.3s ease;
+        }
+
+        .ai-fire-card:hover {
+            border-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-3px);
+            background: rgba(15, 23, 42, 0.9);
+        }
+
+        .ai-card-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
+        }
+
+        .ai-card-icon.pink {
+            background: rgba(255, 75, 114, 0.12);
+            border: 1px solid rgba(255, 75, 114, 0.25);
+            color: #ff4b72;
+        }
+
+        .ai-card-icon.cyan {
+            background: rgba(56, 189, 248, 0.12);
+            border: 1px solid rgba(56, 189, 248, 0.25);
+            color: #38bdf8;
+        }
+
+        .ai-card-icon.amber {
+            background: rgba(245, 158, 11, 0.12);
+            border: 1px solid rgba(245, 158, 11, 0.25);
+            color: #f59e0b;
+        }
+
+        .ai-card-icon svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        .ai-fire-card h3 {
+            font-size: 18px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 12px;
+            letter-spacing: -0.2px;
+        }
+
+        .ai-fire-card p {
+            font-size: 13px;
+            color: #94a3b8;
+            line-height: 1.65;
+        }
+
+        /* Pilot Callout Banner */
+        .pilot-banner {
+            background: rgba(11, 18, 33, 0.95);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 24px 32px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .pilot-info h4 {
+            font-size: 16px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 4px;
+        }
+
+        .pilot-info p {
+            font-size: 13px;
+            color: #64748b;
+        }
+
+        .btn-pilot {
+            background: linear-gradient(135deg, #ff2a5f 0%, #e11d48 100%);
+            color: #ffffff;
+            padding: 12px 22px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 12px;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(225, 29, 72, 0.4);
+            transition: all 0.25s ease;
+            white-space: nowrap;
+        }
+
+        .btn-pilot:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(225, 29, 72, 0.6);
+        }
+
+        /* ---------------------------------------------------- */
+        /* SERVICES & AUDIT CONSULTING SECTION                   */
+        /* ---------------------------------------------------- */
+        .services-section {
+            background-color: #f8fafc;
+            padding: 90px 8%;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .services-container {
+            max-width: 1150px;
+            margin: 0 auto;
+        }
+
+        .services-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .services-tag {
+            font-size: 11px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #0284c7;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .services-title {
+            font-size: 32px;
+            font-weight: 800;
+            color: #0f172a;
+            letter-spacing: -0.5px;
+            margin-bottom: 10px;
+        }
+
+        .services-desc {
+            font-size: 14px;
+            color: #64748b;
+            max-width: 680px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .service-card {
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 32px 28px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+            transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+            border-color: #cbd5e1;
+        }
+
+        .service-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .service-icon.purple { background-color: #f3e8ff; color: #9333ea; }
+        .service-icon.cyan { background-color: #e0f2fe; color: #0284c7; }
+        .service-icon.pink { background-color: #ffe4e6; color: #e11d48; }
+        .service-icon.amber { background-color: #fef3c7; color: #d97706; }
+        .service-icon.emerald { background-color: #d1fae5; color: #059669; }
+        .service-icon.blue { background-color: #dbeafe; color: #2563eb; }
+
+        .service-icon svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        .service-card h3 {
+            font-size: 16px;
+            font-weight: 800;
+            color: #0f172a;
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+
+        .service-card p {
+            font-size: 12.5px;
+            color: #64748b;
+            line-height: 1.65;
+        }
+
+        /* ---------------------------------------------------- */
+        /* IOT-MONITORING & DIGITAL LOGBOOK HUB SECTION         */
+        /* ---------------------------------------------------- */
+        .iot-hub-section {
+            background-color: #030712;
+            color: #ffffff;
+            padding: 90px 8%;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .iot-hub-container {
+            max-width: 1150px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .iot-hub-left {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .iot-hub-tag {
+            font-size: 11px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #38bdf8;
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .iot-hub-title {
+            font-size: 34px;
+            font-weight: 800;
+            color: #ffffff;
+            line-height: 1.25;
+            letter-spacing: -0.5px;
+            margin-bottom: 18px;
+        }
+
+        .iot-hub-desc {
+            font-size: 13.5px;
+            color: #94a3b8;
+            line-height: 1.7;
+            margin-bottom: 32px;
+        }
+
+        .iot-feature-list {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .iot-feature-item {
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+        }
+
+        .iot-feature-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            background: rgba(14, 165, 233, 0.12);
+            border: 1px solid rgba(14, 165, 233, 0.25);
+            color: #38bdf8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .iot-feature-icon svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        .iot-feature-text h4 {
+            font-size: 15px;
+            font-weight: 700;
+            color: #f8fafc;
+            margin-bottom: 4px;
+        }
+
+        .iot-feature-text p {
+            font-size: 12.5px;
+            color: #64748b;
+            line-height: 1.6;
+        }
+
+        /* Terminal Console Box */
+        .telemetry-box {
+            background: #080e1a;
+            border: 1px solid rgba(56, 189, 248, 0.2);
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+        }
+
+        .telemetry-box-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .telemetry-box-title {
+            font-size: 11px;
+            font-weight: 800;
+            color: #38bdf8;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        .telemetry-box-dot {
+            width: 8px;
+            height: 8px;
+            background-color: #34d399;
+            border-radius: 50%;
+            box-shadow: 0 0 10px #34d399;
+        }
+
+        .telemetry-rows {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+        }
+
+        .telemetry-row {
+            background: rgba(15, 23, 42, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 6px;
+            padding: 14px 18px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 12.5px;
+        }
+
+        .telemetry-label {
+            color: #94a3b8;
+            font-weight: 500;
+        }
+
+        .telemetry-value {
+            color: #38bdf8;
+            font-weight: 600;
+        }
+
+        .telemetry-value.green {
+            color: #34d399;
+        }
+
+        /* ---------------------------------------------------- */
+        /* INDUSTRY KNOWLEDGE / BLOG SECTION                    */
+        /* ---------------------------------------------------- */
+        .insights-section {
+            background-color: #ffffff;
+            padding: 90px 8%;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .insights-container {
+            max-width: 1150px;
+            margin: 0 auto;
+        }
+
+        .insights-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .insights-tag {
+            font-size: 11px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #0284c7;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .insights-title {
+            font-size: 32px;
+            font-weight: 800;
+            color: #0f172a;
+            letter-spacing: -0.5px;
+            margin-bottom: 10px;
+        }
+
+        .insights-desc {
+            font-size: 14px;
+            color: #64748b;
+            max-width: 680px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .insights-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .insight-card {
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .insight-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+        }
+
+        .card-image-wrapper {
+            background-color: #111827;
+            height: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .insight-icon {
+            width: 32px;
+            height: 32px;
+        }
+
+        .insight-icon.flame { stroke: #ff4b72; }
+        .insight-icon.recycle { stroke: #38bdf8; }
+        .insight-icon.bolt { stroke: #f59e0b; }
+
+        .card-content {
+            padding: 24px 22px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .card-category {
+            font-size: 10px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .card-category.pink { color: #e11d48; }
+        .card-category.cyan { color: #0284c7; }
+        .card-category.amber { color: #d97706; }
+
+        .card-content h3 {
+            font-size: 16px;
+            font-weight: 800;
+            color: #0f172a;
+            line-height: 1.35;
+            margin-bottom: 10px;
+        }
+
+        .card-content p {
+            font-size: 12.5px;
+            color: #64748b;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .read-article {
+            font-size: 12.5px;
+            font-weight: 700;
+            color: #0284c7;
+            transition: color 0.2s ease;
+        }
+
+        .read-article:hover {
+            color: #0369a1;
+        }
+
+        /* ---------------------------------------------------- */
+        /* DIRECT ENGAGEMENT & CONTACT FORM SECTION             */
+        /* ---------------------------------------------------- */
+        .contact-section {
+            background-color: #f1f5f9;
+            padding: 90px 8%;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .contact-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1.1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .contact-left {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-tag {
+            font-size: 11px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #0284c7;
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .contact-title {
+            font-size: 38px;
+            font-weight: 800;
+            color: #0f172a;
+            line-height: 1.15;
+            letter-spacing: -0.8px;
+            margin-bottom: 20px;
+        }
+
+        .contact-desc {
+            font-size: 14px;
+            color: #64748b;
+            line-height: 1.7;
+            margin-bottom: 36px;
+        }
+
+        .contact-info-list {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        .contact-info-item {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            font-size: 13.5px;
+            font-weight: 600;
+            color: #334155;
+        }
+
+        .contact-info-icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+            background-color: #e0f2fe;
+            color: #0284c7;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .contact-info-icon svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        .contact-form-card {
+            background-color: #ffffff;
+            border-radius: 16px;
+            padding: 36px 32px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e2e8f0;
+        }
+
+        .form-grid-2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+            margin-bottom: 18px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            margin-bottom: 18px;
+        }
+
+        .form-group.no-margin {
+            margin-bottom: 0;
+        }
+
+        .form-label {
+            font-size: 10.5px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            color: #475569;
+        }
+
+        .form-input, .form-select, .form-textarea {
+            width: 100%;
+            padding: 12px 14px;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            font-size: 13px;
+            color: #0f172a;
+            outline: none;
+            background-color: #ffffff;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .form-input:focus, .form-select:focus, .form-textarea:focus {
+            border-color: #0284c7;
+            box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.12);
+        }
+
+        .form-input::placeholder, .form-textarea::placeholder {
+            color: #94a3b8;
+        }
+
+        .form-textarea {
+            resize: vertical;
+            min-height: 90px;
+        }
+
+        .btn-submit {
+            width: 100%;
+            background-color: #008ba3;
+            color: #ffffff;
+            padding: 14px;
+            border: none;
+            border-radius: 6px;
+            font-weight: 800;
+            font-size: 13px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background-color 0.25s ease, transform 0.15s ease;
+            box-shadow: 0 4px 14px rgba(0, 139, 163, 0.3);
+            margin-top: 6px;
+        }
+
+        .btn-submit:hover {
+            background-color: #00778c;
+            transform: translateY(-1px);
+        }
+
+        /* ---------------------------------------------------- */
+        /* STATS & FOOTER                                       */
+        /* ---------------------------------------------------- */
+        .stats {
+            background-color: var(--accent-green);
+            color: #ffffff;
+            display: flex;
+            justify-content: space-around;
+            padding: 60px 8%;
+            text-align: center;
+        }
+
+        .stat-item h2 {
+            font-size: 42px;
+            font-weight: 300;
+            margin-bottom: 5px;
+        }
+
+        .stat-item p {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+
+        footer {
+            background-color: #0b1320;
+            color: #94a3b8;
+            padding: 60px 8% 30px 8%;
+            font-size: 14px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: #ffffff;
+            font-size: 15px;
+            margin-bottom: 18px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .footer-col p {
+            margin-bottom: 10px;
+            font-size: 13px;
+            color: #a0aec0;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            border-top: 1px solid #1a2536;
+            padding-top: 25px;
+            font-size: 12px;
+            color: #64748b;
+        }
+
+        /* ---------------------------------------------------- */
+        /* RESPONSIVE DESIGN                                    */
+        /* ---------------------------------------------------- */
+        @media (max-width: 1024px) {
+            .nav-links { gap: 16px; }
+            .nav-links li a { font-size: 13px; }
+            .ai-fire-grid { grid-template-columns: 1fr; }
+            .services-grid { grid-template-columns: repeat(2, 1fr); }
+            .iot-hub-container { grid-template-columns: 1fr; gap: 40px; }
+            .insights-grid { grid-template-columns: 1fr; }
+            .contact-container { grid-template-columns: 1fr; gap: 40px; }
+        }
+
+        @media (max-width: 992px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .top-bar {
+                flex-direction: column;
+                gap: 8px;
+                padding: 8px 5%;
+                text-align: center;
+            }
+
+            .top-bar-left {
+                flex-direction: column;
+                gap: 6px;
+            }
+
+            .navbar {
+                flex-direction: column;
+                gap: 16px;
+                padding: 16px 5%;
+            }
+
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .cards-grid-2 {
+                grid-template-columns: 1fr;
+            }
+
+            .pilot-banner {
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .navbar .nav-links,
+            .navbar .btn-audit {
+                display: none !important;
+            }
+
+            .top-bar {
+                display: none;
+            }
+
+            .hero { padding: 50px 5% 60px 5%; }
+            .hero h1 { font-size: 32px; }
+            .hero-buttons { flex-direction: column; }
+            .hero-stats-row { flex-direction: column; gap: 20px; }
+
+            .social-sidebar {
+                top: auto;
+                bottom: 20px;
+                transform: none;
+                gap: 6px;
+            }
+
+            .social-link {
+                width: 42px;
+                height: 42px;
+                padding-left: 10px;
+            }
+
+            .social-link svg { width: 18px; height: 18px; }
+            .social-link:hover { width: 130px; }
+
+            .info-section { padding: 50px 5%; }
+            .section-title-large { font-size: 24px; }
+
+            .ai-fire-section { padding: 50px 5%; }
+            .ai-fire-title { font-size: 26px; }
+
+            .services-section { padding: 50px 5%; }
+            .services-title { font-size: 26px; }
+            .services-grid { grid-template-columns: 1fr; }
+
+            .iot-hub-section { padding: 50px 5%; }
+            .iot-hub-title { font-size: 26px; }
+
+            .insights-section { padding: 50px 5%; }
+            .insights-title { font-size: 26px; }
+
+            .contact-section { padding: 50px 5%; }
+            .contact-title { font-size: 28px; }
+            .form-grid-2 { grid-template-columns: 1fr; gap: 0; }
+
+            .stats {
+                flex-direction: column;
+                gap: 30px;
+                padding: 40px 5%;
+            }
+
+            footer { padding: 40px 5% 20px 5%; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- TOP ANNOUNCEMENT / HEADER BANNER -->
+    <div class="top-bar">
+        <div class="top-bar-left">
+            <div class="top-bar-item blue">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                    <polyline points="9 12 11 14 15 10"></polyline>
+                </svg>
+                <span>Statutory Industrial Compliance &amp; Environmental Engineering</span>
+            </div>
+            <div class="top-bar-item red">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path>
+                </svg>
+                <span>Vision AI Early Fire Detection Engine (&lt;5s Response)</span>
+            </div>
+        </div>
+        <div class="top-bar-right">
+            <a href="tel:+910512200XXXX">Hotline: +91 (0512) 200-XXXX</a>
+            <span class="top-bar-divider">|</span>
+            <a href="#vault" class="client-vault-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                </svg>
+                <span>Client Vault Login</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- FLOATING SIDEBAR CONTACT BUTTONS -->
+    <aside class="social-sidebar" aria-label="Social and Direct Contact Options">
+        <a href="https://wa.me/918299288481" target="_blank" rel="noopener noreferrer" class="social-link whatsapp" aria-label="Chat on WhatsApp">
+            <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+            <span>WhatsApp</span>
+        </a>
+        <a href="https://www.facebook.com/share/19dFbGMTRe/" target="_blank" rel="noopener noreferrer" class="social-link facebook" aria-label="Visit Facebook Page">
+            <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            <span>Facebook</span>
+        </a>
+        <a href="https://x.com/Motleygroup_in" target="_blank" rel="noopener noreferrer" class="social-link twitter" aria-label="Follow on X">
+            <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            <span>Twitter (X)</span>
+        </a>
+        <a href="https://www.linkedin.com/in/motley-group-799191435/" target="_blank" rel="noopener noreferrer" class="social-link linkedin" aria-label="Connect on LinkedIn">
+            <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            <span>LinkedIn</span>
+        </a>
+    </aside>
+
+    <!-- NAVIGATION BAR -->
+    <nav class="navbar">
+        <div class="logo-container">
+            <img src="MotleyGroup_logo.png" alt="MotleyGroup Logo" class="logo-img">
+            <div class="logo-text">
+                <span class="logo-title">MOTLEY GROUP</span>
+                <span class="logo-subtitle">Global Industrial Solutions</span>
+            </div>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">Company</a></li>
+            <li><a href="#products">Products &amp; Solutions</a></li>
+            <li>
+                <a href="#ai-fire-safety" class="highlight-red">
+                    <span>AI Fire Safety</span>
+                    <span class="badge-new">NEW</span>
+                </a>
+            </li>
+            <li><a href="#services">Services &amp; Audits</a></li>
+            <li>
+                <a href="#iot-monitoring" class="highlight-cyan">
+                    <span>IoT-Monitoring</span>
+                    <span class="dot-indicator"></span>
+                </a>
+            </li>
+            <li><a href="#blog">Blog</a></li>
+        </ul>
+
+        <a href="mailto:contact@motleygroup.com" class="btn-audit">Book an<br>Audit</a>
+    </nav>
+
+    <!-- HERO BANNER SECTION WITH BACKGROUND SLIDESHOW -->
+    <header class="hero" id="home">
+        <!-- Background Slideshow Images -->
+        <div class="hero-slideshow">
+            <div class="hero-slide">
+                <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1920&q=80" alt="Industrial Facility 1">
+            </div>
+            <div class="hero-slide">
+                <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=1920&q=80" alt="Industrial Facility 2">
+            </div>
+            <div class="hero-slide">
+                <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1920&q=80" alt="Industrial Facility 3">
+            </div>
+        </div>
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="hero-badge-dot"></span>
+                    Turnkey Engineering, Predictive AI &amp; Compliance
+                </div>
+                
+                <h1>
+                    Industrial Water Solutions,<br>
+                    <span class="text-gradient-red-blue">Vision AI Fire Safety</span> &amp;<br>
+                    Audits.
+                </h1>
+                
+                <p>
+                    Turnkey RO, ETP, STP, and ZLD installations paired with optical AI fire detection on existing CCTVs, certified thermal-electrical audits, and tamper-proof digital logbooks.
+                </p>
+                
+                <div class="hero-buttons">
+                    <a href="mailto:contact@motleygroup.com" class="btn-cyan">Schedule Plant Audit</a>
+                    <a href="#ai-fire-safety" class="btn-pink">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path>
+                        </svg>
+                        Explore AI Fire Safety
+                    </a>
+                </div>
+                
+                <div class="hero-stats-row">
+                    <div class="hero-stat-item">
+                        <h3 class="pink-text">&lt; 5 Sec</h3>
+                        <p>Optical Fire Trigger</p>
+                    </div>
+                    <div class="hero-stat-item">
+                        <h3 class="cyan-text">Zero CapEx</h3>
+                        <p>CCTV Hardware Retrofit</p>
+                    </div>
+                    <div class="hero-stat-item">
+                        <h3 class="white-text">100%</h3>
+                        <p>Statutory Clearance</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Live Telemetry UI Card -->
+            <div class="hero-widget">
+                <div class="widget-header">
+                    <div class="widget-title">
+                        <span class="widget-title-dot"></span>
+                        Plant Control &amp; Hazard Telemetry
+                    </div>
+                    <span class="widget-badge">LIVE FEEDS</span>
+                </div>
+
+                <div class="telemetry-card">
+                    <div class="telemetry-info">
+                        <h4>Vision AI Fire Stream</h4>
+                        <p>16 Real-time IP Cameras</p>
+                    </div>
+                    <span class="status-pill green">Zero Active Threat</span>
+                </div>
+
+                <div class="telemetry-card">
+                    <div class="telemetry-info">
+                        <h4>Effluent Quality (ETP/STP)</h4>
+                        <p>pH: 7.34 | TDS: 1,410 ppm</p>
+                    </div>
+                    <span class="status-pill cyan">PCB Sync Valid</span>
+                </div>
+
+                <div class="telemetry-card">
+                    <div class="telemetry-info">
+                        <h4>Thermal Hotspot Surveillance</h4>
+                        <p>Main LT Panel &amp; Bus Duct</p>
+                    </div>
+                    <span class="status-pill cyan">Nominal (38.4°C)</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- COMPANY VISION & MISSION SECTION -->
+    <section class="info-section" id="about">
+        <div class="info-container">
+            <div class="info-header">
+                <span class="section-tag">Corporate Foundation</span>
+                <h2 class="section-title-large">Company Vision &amp; Mission</h2>
+                <p class="section-desc">Empowering industrial infrastructure with reliable engineering, predictive safety audits, and automated statutory workflows.</p>
+            </div>
+
+            <div class="cards-grid-2">
+                <!-- Our Vision -->
+                <div class="info-card">
+                    <div class="card-icon cyan">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <circle cx="12" cy="12" r="3"></circle>
+                        </svg>
+                    </div>
+                    <h3>Our Vision</h3>
+                    <p>To establish a benchmark in industrial safety and zero liquid discharge operations by converging artificial intelligence, continuous IoT telemetry, and certified technical auditing under one single-window partner.</p>
+                </div>
+
+                <!-- Our Mission -->
+                <div class="info-card">
+                    <div class="card-icon green">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                            <polyline points="9 12 11 14 15 10"></polyline>
+                        </svg>
+                    </div>
+                    <h3>Our Mission</h3>
+                    <p>To eliminate factory downtime, safeguard industrial life and assets through early optical detection, and deliver turnkey environmental engineering that meets the strictest statutory discharge guidelines.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUCTS & WATER SOLUTIONS SECTION -->
+    <section class="info-section" id="products" style="background-color: #ffffff;">
+        <div class="info-container">
+            <div class="info-header">
+                <span class="section-tag">Custom Engineered Equipment</span>
+                <h2 class="section-title-large">Products &amp; Water Solutions</h2>
+                <p class="section-desc">Turnkey process water treatment and industrial wastewater management systems engineered for heavy manufacturing.</p>
+            </div>
+
+            <div class="cards-grid-2">
+                <!-- Water Treatment Systems -->
+                <div class="info-card">
+                    <div class="card-icon cyan">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+                        </svg>
+                    </div>
+                    <h3>Water Treatment Systems</h3>
+                    <p class="product-sub-desc">High-efficiency pure water generation and scale-prevention equipment for industrial utilities and boilers.</p>
+
+                    <ul class="product-list">
+                        <li class="product-item">
+                            <div class="product-check-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                            </div>
+                            <div class="product-text">
+                                <h4>Industrial Reverse Osmosis (RO) Systems</h4>
+                                <p>Custom multi-stage commercial &amp; industrial RO systems designed to eliminate dissolved salts and silica.</p>
+                            </div>
+                        </li>
+                        <li class="product-item">
+                            <div class="product-check-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                            </div>
+                            <div class="product-text">
+                                <h4>Industrial Water Softeners</h4>
+                                <p>Automated ion-exchange softening plants that prevent catastrophic limescale inside cooling towers and boilers.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Wastewater Treatment Systems -->
+                <div class="info-card">
+                    <div class="card-icon cyan">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"></path>
+                        </svg>
+                    </div>
+                    <h3>Wastewater Treatment Systems</h3>
+                    <p class="product-sub-desc">Physicochemical, biological, and advanced thermal systems ensuring 100% pollution control board compliance.</p>
+
+                    <ul class="product-list">
+                        <li class="product-item">
+                            <div class="product-check-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                            </div>
+                            <div class="product-text">
+                                <h4>Effluent Treatment Plants (ETP)</h4>
+                                <p>Chemical precipitation, primary settling, and biological aeration plants for high-COD/BOD industrial discharge.</p>
+                            </div>
+                        </li>
+                        <li class="product-item">
+                            <div class="product-check-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                            </div>
+                            <div class="product-text">
+                                <h4>Sewage Treatment Plants (STP)</h4>
+                                <p>MBBR, SBR, and compact MBR setups recycling sanitary wastewater for cooling towers and flushing.</p>
+                            </div>
+                        </li>
+                        <li class="product-item">
+                            <div class="product-check-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                            </div>
+                            <div class="product-text">
+                                <h4>Zero Liquid Discharge (ZLD) Systems</h4>
+                                <p>Integrated Multi-Effect Evaporators (MEE) and ATFD crystallizers recovering over 98% clean water.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VISION AI EARLY FIRE & HAZARD DETECTION SECTION -->
+    <section class="ai-fire-section" id="ai-fire-safety">
+        <div class="ai-fire-container">
+            <div class="ai-fire-header">
+                <span class="ai-fire-tag">Next-Gen Predictive Life Safety</span>
+                <h2 class="ai-fire-title">Vision AI Early Fire &amp; Hazard Detection</h2>
+                <p class="ai-fire-desc">Upgrade your existing IP CCTV network into a real-time optical flame and smoke detection engine. Detect fire hazards in seconds without expensive wiring or hardware replacements.</p>
+            </div>
+
+            <div class="ai-fire-grid">
+                <!-- Card 1 -->
+                <div class="ai-fire-card">
+                    <div class="ai-card-icon pink">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                        </svg>
+                    </div>
+                    <h3>&lt; 5-Second Trigger Latency</h3>
+                    <p>Traditional smoke detectors in high-ceiling warehouses take 3 to 5 minutes to trigger. Vision AI detects visible flame patterns and rising smoke within seconds of ignition.</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="ai-fire-card">
+                    <div class="ai-card-icon cyan">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+                            <circle cx="12" cy="13" r="4"></circle>
+                        </svg>
+                    </div>
+                    <h3>Zero CapEx CCTV Retrofit</h3>
+                    <p>No new sensors, ceiling conduits, or invasive hardware. Connect our edge-processing box to your existing Onvif/RTSP IP cameras and monitor high-risk zones immediately.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="ai-fire-card">
+                    <div class="ai-card-icon amber">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+                            <line x1="12" y1="9" x2="12" y2="13"></line>
+                            <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                        </svg>
+                    </div>
+                    <h3>Facility Safety Violations</h3>
+                    <p>Automated AI models notify safety managers whenever pallets block designated fire exits, fire extinguishers are moved, or workers fail to wear required PPE in hazard zones.</p>
+                </div>
+            </div>
+
+            <!-- Pilot Test Callout Box -->
+            <div class="pilot-banner">
+                <div class="pilot-info">
+                    <h4>Pilot Test AI Fire Safety on 2 Cameras for 7 Days</h4>
+                    <p>Experience real-time flame alerts, false-alarm suppression, and instant WhatsApp notifications at zero initial risk.</p>
+                </div>
+                <a href="mailto:contact@motleygroup.com" class="btn-pilot">Request 7-Day Pilot Run</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES & AUDIT CONSULTING SECTION -->
+    <section class="services-section" id="services">
+        <div class="services-container">
+            <div class="services-header">
+                <span class="services-tag">Complete Scope of Work</span>
+                <h2 class="services-title">Services &amp; Audit Consulting</h2>
+                <p class="services-desc">Regulatory compliance management, life-safety audits, and energy studies using certified instrumentation.</p>
+            </div>
+
+            <div class="services-grid">
+                <!-- 1. Turnkey Compliance Management -->
+                <div class="service-card">
+                    <div class="service-icon purple">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                            <line x1="8" y1="21" x2="16" y2="21"></line>
+                            <line x1="12" y1="17" x2="12" y2="21"></line>
+                        </svg>
+                    </div>
+                    <h3>Turnkey Compliance Management</h3>
+                    <p>Statutory liaisoning, consent renewals (CTE/CTO), hazardous waste filings (Form 4/5), and show-cause notice responses.</p>
+                </div>
+
+                <!-- 2. Water & Effluent Testing -->
+                <div class="service-card">
+                    <div class="service-icon cyan">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M10 2v7.51L4.53 17.92A2 2 0 0 0 6.24 21h11.52a2 2 0 0 0 1.71-3.08L14 9.51V2"></path>
+                            <line x1="8.5" y1="2" x2="15.5" y2="2"></line>
+                        </svg>
+                    </div>
+                    <h3>Water &amp; Effluent Testing (ETP/STP)</h3>
+                    <p>NABL-calibrated parameter analysis (COD, BOD, TDS, TSS, Heavy metals) ensuring solid evidentiary compliance during inspections.</p>
+                </div>
+
+                <!-- 3. Fire Protection & System Installation -->
+                <div class="service-card">
+                    <div class="service-icon pink">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path>
+                        </svg>
+                    </div>
+                    <h3>Fire Protection &amp; System Installation</h3>
+                    <p>Comprehensive fire safety audits, certified hydrant &amp; sprinkler network design, and statutory Fire NOC procurement.</p>
+                </div>
+
+                <!-- 4. Fire Safety AMC with Digital Logbook -->
+                <div class="service-card">
+                    <div class="service-icon pink">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                            <path d="M7 7h3v3H7zM14 7h3v3h-3zM7 14h3v3H7zM14 14h3v3h-3z"></path>
+                        </svg>
+                    </div>
+                    <h3>Fire Safety AMC with Digital Logbook</h3>
+                    <p>QR-code tagged maintenance contracts replacing physical registers with cloud-auditable records of pump and valve tests.</p>
+                </div>
+
+                <!-- 5. Thermal & Electrical Safety & Power Quality -->
+                <div class="service-card">
+                    <div class="service-icon amber">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                        </svg>
+                    </div>
+                    <h3>Thermal &amp; Electrical Safety &amp; Power Quality</h3>
+                    <p>Level-3 thermography hotspot scanning, power harmonics analysis, and APFC optimization conducted during active production.</p>
+                </div>
+
+                <!-- 6. Electrical Safety AMC with Digital Logbook -->
+                <div class="service-card">
+                    <div class="service-icon amber">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18.36 6.64a9 9 0 1 1-12.73 0"></path>
+                            <line x1="12" y1="2" x2="12" y2="12"></line>
+                        </svg>
+                    </div>
+                    <h3>Electrical Safety AMC with Digital Logbook</h3>
+                    <p>Preventative maintenance tracking and digital health records for switchgear, transformers, and distribution panels.</p>
+                </div>
+
+                <!-- 7. Industrial Safety Audit -->
+                <div class="service-card">
+                    <div class="service-icon cyan">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                    </div>
+                    <h3>Industrial Safety Audit</h3>
+                    <p>Mandatory workplace reviews under the Factories Act: machine guarding, PPE compliance, and chemical handling hazard reduction.</p>
+                </div>
+
+                <!-- 8. Industrial Energy Audit & Efficiency Studies -->
+                <div class="service-card">
+                    <div class="service-icon emerald">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+                        </svg>
+                    </div>
+                    <h3>Industrial Energy Audit &amp; Efficiency Studies</h3>
+                    <p>BEE-standard plant audits identifying thermal heat losses, motor inefficiencies, and direct monthly electricity bill cuts.</p>
+                </div>
+
+                <!-- 9. Carbon Footprint & GHG Assessment -->
+                <div class="service-card">
+                    <div class="service-icon emerald">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="2" y1="12" x2="22" y2="12"></line>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                        </svg>
+                    </div>
+                    <h3>Carbon Footprint &amp; GHG Assessment</h3>
+                    <p>Scope 1, 2, and 3 emissions accounting, sustainability roadmaps, and baseline documentation required for export vendors.</p>
+                </div>
+
+                <!-- 10. Power Safety & Electrical Risk Assessment -->
+                <div class="service-card">
+                    <div class="service-icon amber">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+                            <line x1="1" y1="10" x2="23" y2="10"></line>
+                        </svg>
+                    </div>
+                    <h3>Power Safety &amp; Electrical Risk Assessment</h3>
+                    <p>Arc-flash calculations, short-circuit validation, earth pit testing, and human contact protection audits.</p>
+                </div>
+
+                <!-- 11. Testing & Commissioning (Electrical & HVAC) -->
+                <div class="service-card">
+                    <div class="service-icon blue">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+                        </svg>
+                    </div>
+                    <h3>Testing &amp; Commissioning (Electrical &amp; HVAC)</h3>
+                    <p>Thermal duct balancing, CFM tests, smoke damper checks, and DG synchronization before facility handovers.</p>
+                </div>
+
+                <!-- 12. Building Energy Audit Services -->
+                <div class="service-card">
+                    <div class="service-icon purple">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                        </svg>
+                    </div>
+                    <h3>Building Energy Audit Services</h3>
+                    <p>Energy benchmarking for hospitals, hotels, and shopping malls to eliminate utility wastage in central chillers and pumps.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 24/7 IOT-MONITORING & DIGITAL LOGBOOK HUB SECTION -->
+    <section class="iot-hub-section" id="iot-monitoring">
+        <div class="iot-hub-container">
+            <div class="iot-hub-left">
+                <span class="iot-hub-tag">Cloud Connected Operations</span>
+                <h2 class="iot-hub-title">24/7 IoT-Monitoring &amp; Digital Logbook Hub</h2>
+                <p class="iot-hub-desc">Replace easily misplaced paper registers and untracked maintenance. Connect physical plant equipment and live CCTV AI streams directly to your regulatory dashboard.</p>
+
+                <div class="iot-feature-list">
+                    <div class="iot-feature-item">
+                        <div class="iot-feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 12.55a11 11 0 0 1 14.08 0"></path>
+                                <path d="M1.42 9a16 16 0 0 1 21.16 0"></path>
+                                <path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path>
+                                <line x1="12" y1="20" x2="12.01" y2="20"></line>
+                            </svg>
+                        </div>
+                        <div class="iot-feature-text">
+                            <h4>Continuous ETP/STP Telemetry</h4>
+                            <p>Online continuous effluent quality and flow-meter readings synced with state pollution control servers.</p>
+                        </div>
+                    </div>
+
+                    <div class="iot-feature-item">
+                        <div class="iot-feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <path d="M7 7h3v3H7zM14 7h3v3h-3zM7 14h3v3H7zM14 14h3v3h-3z"></path>
+                            </svg>
+                        </div>
+                        <div class="iot-feature-text">
+                            <h4>QR-Enabled Digital Logbooks</h4>
+                            <p>Field staff record pump pressure tests, fire checks, and thermography by scanning physical on-site tags.</p>
+                        </div>
+                    </div>
+
+                    <div class="iot-feature-item">
+                        <div class="iot-feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+                                <circle cx="12" cy="13" r="4"></circle>
+                            </svg>
+                        </div>
+                        <div class="iot-feature-text">
+                            <h4>Vision AI Safety Stream</h4>
+                            <p>Automated surveillance feeds flagging optical smoke or exit obstructions in real-time.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Terminal Interface Card -->
+            <div class="telemetry-box">
+                <div class="telemetry-box-header">
+                    <span class="telemetry-box-title">Active Plant Telemetry</span>
+                    <span class="telemetry-box-dot"></span>
+                </div>
+
+                <div class="telemetry-rows">
+                    <div class="telemetry-row">
+                        <span class="telemetry-label">Effluent pH Level:</span>
+                        <span class="telemetry-value green">7.32 pH [Compliant]</span>
+                    </div>
+
+                    <div class="telemetry-row">
+                        <span class="telemetry-label">Hydrant Pressure:</span>
+                        <span class="telemetry-value green">7.3 Bar [Certified]</span>
+                    </div>
+
+                    <div class="telemetry-row">
+                        <span class="telemetry-label">Optical Fire Vision:</span>
+                        <span class="telemetry-value green">16 Cameras Active (0 Hazards)</span>
+                    </div>
+
+                    <div class="telemetry-row">
+                        <span class="telemetry-label">DISH Form 8 Validation:</span>
+                        <span class="telemetry-value">Uploaded &amp; Certified</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INDUSTRY KNOWLEDGE / BLOG SECTION -->
+    <section class="insights-section" id="blog">
+        <div class="insights-container">
+            <div class="insights-header">
+                <span class="insights-tag">INDUSTRY KNOWLEDGE</span>
+                <h2 class="insights-title">Latest Engineering &amp; Regulatory Insights</h2>
+                <p class="insights-desc">Stay ahead of changing environmental norms, fire safety codes, and predictive maintenance technologies.</p>
+            </div>
+
+            <div class="insights-grid">
+                <!-- Article Card 1 -->
+                <div class="insight-card">
+                    <div class="card-image-wrapper">
+                        <svg class="insight-icon flame" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path>
+                        </svg>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-category pink">VISION AI FIRE SAFETY</span>
+                        <h3>Why Optical AI Flame Detection Outperforms Ceiling Smoke Sensors</h3>
+                        <p>How optical pattern analysis on existing factory cameras reduces life-safety trigger times from minutes to under 5 seconds.</p>
+                        <a href="#" class="read-article">Read Article &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Article Card 2 -->
+                <div class="insight-card">
+                    <div class="card-image-wrapper">
+                        <svg class="insight-icon recycle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="23 4 23 10 17 10"></polyline>
+                            <polyline points="1 20 1 14 7 14"></polyline>
+                            <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
+                        </svg>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-category cyan">WASTEWATER REGULATIONS</span>
+                        <h3>Zero Liquid Discharge Mandates for Heavy Industrial Clusters</h3>
+                        <p>An engineering breakdown of Multi-Effect Evaporators (MEE) and ATFD systems required for strict river basin discharge norms.</p>
+                        <a href="#" class="read-article">Read Article &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Article Card 3 -->
+                <div class="insight-card">
+                    <div class="card-image-wrapper">
+                        <svg class="insight-icon bolt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                        </svg>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-category amber">PREDICTIVE ELECTRICAL AUDITS</span>
+                        <h3>Infrared Thermography: Stopping Catastrophic Switchgear Breakdowns</h3>
+                        <p>Detecting electrical panel hotspots without power outages to fulfill mandatory insurance safety clauses.</p>
+                        <a href="#" class="read-article">Read Article &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DIRECT ENGAGEMENT & CONTACT FORM SECTION -->
+    <section class="contact-section" id="contact">
+        <div class="contact-container">
+            <div class="contact-left">
+                <span class="contact-tag">DIRECT ENGAGEMENT</span>
+                <h2 class="contact-title">Schedule Your Facility Audit or Inquire for Solutions.</h2>
+                <p class="contact-desc">Connect directly with our technical team to design your wastewater system, test an AI Fire pilot, or establish a turnkey statutory compliance retainer.</p>
+
+                <div class="contact-info-list">
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                        </div>
+                        <span>Industrial Area, Panki / Dada Nagar, Kanpur (UP)</span>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                        </div>
+                        <span>contact@motleygroup.com</span>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                        </div>
+                        <span>+91 (0512) 200-XXXX / +91 XXXXX XXXXX</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Inquiry Form -->
+            <div class="contact-form-card">
+                <form action="#" method="POST">
+                    <div class="form-grid-2">
+                        <div class="form-group">
+                            <label class="form-label">First Name</label>
+                            <input type="text" class="form-input" placeholder="John" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Last Name</label>
+                            <input type="text" class="form-input" placeholder="Doe" required>
+                        </div>
+                    </div>
+
+                    <div class="form-grid-2">
+                        <div class="form-group">
+                            <label class="form-label">Work Email</label>
+                            <input type="email" class="form-input" placeholder="john@company.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Phone Number</label>
+                            <input type="tel" class="form-input" placeholder="+91 98765 43210" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Inquiry Area</label>
+                        <select class="form-select">
+                            <option value="audit">Schedule Facility Audit</option>
+                            <option value="water">Industrial Water Treatment (RO/ETP/STP/ZLD)</option>
+                            <option value="fire">Vision AI Fire Safety System</option>
+                            <option value="iot">IoT Telemetry &amp; Digital Logbooks</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Message / Facility Details</label>
+                        <textarea class="form-textarea" placeholder="Tell us about your facility location and specific requirements..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Submit Inquiry</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS BANNER -->
+    <section class="stats">
+        <div class="stat-item">
+            <h2>150+</h2>
+            <p>Industrial Clients</p>
+        </div>
+        <div class="stat-item">
+            <h2>100%</h2>
+            <p>Statutory Compliance</p>
+        </div>
+        <div class="stat-item">
+            <h2>24/7</h2>
+            <p>Remote Telemetry</p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Motley Group</h4>
+                <p>Global Industrial Solutions provider delivering statutory compliance, water engineering, and predictive AI safety systems.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <p><a href="#about">Company Vision</a></p>
+                <p><a href="#products">Products &amp; Water Solutions</a></p>
+                <p><a href="#ai-fire-safety">Vision AI Fire Safety</a></p>
+                <p><a href="#services">Services &amp; Audits</a></p>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p>Industrial Area, Panki / Dada Nagar, Kanpur (UP)</p>
+                <p>Email: contact@motleygroup.com</p>
+                <p>Phone: +91 (0512) 200-XXXX</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Motley Group. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
