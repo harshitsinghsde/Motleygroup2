@@ -236,18 +236,89 @@
             gap: 28px;
         }
 
+        .nav-links li {
+            position: relative;
+        }
+
         .nav-links li a {
             font-weight: 600;
             font-size: 14px;
             color: #334155;
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 6px;
             transition: color 0.2s ease;
+            padding: 8px 0;
         }
 
         .nav-links li a:hover {
             color: #0284c7;
+        }
+
+        /* Dropdown Chevron Arrow */
+        .dropdown-arrow {
+            width: 10px;
+            height: 6px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            transition: transform 0.2s ease;
+        }
+
+        .dropdown-item:hover .dropdown-arrow {
+            transform: rotate(180deg);
+        }
+
+        /* Dropdown Menu Styling */
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 290px;
+            background-color: #e5e7eb;
+            border: 1px solid #cbd5e1;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            list-style: none;
+            display: none;
+            flex-direction: column;
+            z-index: 2000;
+        }
+
+        .dropdown-item:hover .dropdown-menu {
+            display: flex;
+        }
+
+        .dropdown-menu li {
+            width: 100%;
+            border-bottom: 1px solid #d1d5db;
+        }
+
+        .dropdown-menu li:last-child {
+            border-bottom: none;
+        }
+
+        .dropdown-menu li a {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 16px;
+            font-size: 13.5px;
+            font-weight: 700;
+            color: #1f2937;
+            text-decoration: none;
+            transition: background-color 0.2s ease, color 0.2s ease;
+        }
+
+        .dropdown-menu li a:hover {
+            background-color: #0f4c81;
+            color: #ffffff;
+        }
+
+        .dropdown-menu li a .item-arrow {
+            font-size: 12px;
+            font-weight: 800;
         }
 
         .nav-links li a.highlight-red {
@@ -312,7 +383,6 @@
             align-items: center;
         }
 
-        /* Hero Slideshow Background Container */
         .hero-slideshow {
             position: absolute;
             top: 0;
@@ -511,7 +581,6 @@
             margin: 0;
         }
 
-        /* Live Dashboard Telemetry Card */
         .hero-widget {
             background: rgba(13, 22, 38, 0.85);
             border: 1px solid rgba(255, 255, 255, 0.15);
@@ -871,7 +940,6 @@
             line-height: 1.65;
         }
 
-        /* Pilot Callout Banner */
         .pilot-banner {
             background: rgba(11, 18, 33, 0.95);
             border: 1px solid rgba(255, 255, 255, 0.1);
@@ -1111,7 +1179,6 @@
             line-height: 1.6;
         }
 
-        /* Terminal Console Box */
         .telemetry-box {
             background: #080e1a;
             border: 1px solid rgba(56, 189, 248, 0.2);
@@ -1346,7 +1413,6 @@
             letter-spacing: -0.5px;
         }
 
-        /* Infinite Horizontal Carousel */
         .logo-slider {
             position: relative;
             width: 100%;
@@ -1661,7 +1727,25 @@
         <ul class="nav-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">Company</a></li>
-            <li><a href="#products">Products &amp; Solutions</a></li>
+            <li class="dropdown-item">
+                <a href="#products">
+                    <span>Product</span>
+                    <svg class="dropdown-arrow" viewBox="0 0 10 6">
+                        <polyline points="1 1 5 5 9 1"></polyline>
+                    </svg>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="STP.html">Sewage Treatment Plant <span class="item-arrow">&gt;</span></a></li>
+                    <li><a href="#products">Effluent Treatment Plant <span class="item-arrow">&gt;</span></a></li>
+                    <li><a href="#products">Zero Liquid Discharge Plant <span class="item-arrow">&gt;</span></a></li>
+                    <li><a href="#products">RO Plant <span class="item-arrow">&gt;</span></a></li>
+                    <li><a href="#products">Waste Water Treatment Plant</a></li>
+                    <li><a href="#products">Softener Plant <span class="item-arrow">&gt;</span></a></li>
+                    <li><a href="#products">Water Treatment Plant</a></li>
+                    <li><a href="#products">SBR Sewage Treatment Plant</a></li>
+                    <li><a href="#products">MBR Sewage Treatment Plant</a></li>
+                </ul>
+            </li>
             <li>
                 <a href="#ai-fire-safety" class="highlight-red">
                     <span>AI Fire Safety</span>
@@ -1684,7 +1768,6 @@
 
     <!-- HERO BANNER SECTION WITH BACKGROUND SLIDESHOW -->
     <header class="hero" id="home">
-        <!-- Background Slideshow Images -->
         <div class="hero-slideshow">
             <div class="hero-slide">
                 <img src="Ai fire safety.png">
@@ -1791,7 +1874,6 @@
             </div>
 
             <div class="cards-grid-2">
-                <!-- Our Vision -->
                 <div class="info-card">
                     <div class="card-icon cyan">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -1803,7 +1885,6 @@
                     <p>To establish the national benchmark in industrial environmental engineering and workplace hazard prevention by integrating smart IoT surveillance, zero-liquid discharge methodologies, and transparent compliance operations.</p>
                 </div>
 
-                <!-- Our Mission -->
                 <div class="info-card">
                     <div class="card-icon green">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -1828,7 +1909,6 @@
             </div>
 
             <div class="cards-grid-2">
-                <!-- Water Treatment Systems -->
                 <div class="info-card">
                     <div class="card-icon cyan">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -1864,7 +1944,6 @@
                     </ul>
                 </div>
 
-                <!-- Wastewater Treatment Systems -->
                 <div class="info-card">
                     <div class="card-icon cyan">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -1924,7 +2003,6 @@
             </div>
 
             <div class="ai-fire-grid">
-                <!-- Card 1 -->
                 <div class="ai-fire-card">
                     <div class="ai-card-icon pink">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -1935,7 +2013,6 @@
                     <p>Traditional smoke detectors in high-ceiling warehouses take 3 to 5 minutes to trigger. Vision AI detects visible flame patterns and rising smoke within seconds of ignition.</p>
                 </div>
 
-                <!-- Card 2 -->
                 <div class="ai-fire-card">
                     <div class="ai-card-icon cyan">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -1947,7 +2024,6 @@
                     <p>No new sensors, ceiling conduits, or invasive hardware. Connect our edge-processing box to your existing Onvif/RTSP IP cameras and monitor high-risk zones immediately.</p>
                 </div>
 
-                <!-- Card 3 -->
                 <div class="ai-fire-card">
                     <div class="ai-card-icon amber">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -1961,7 +2037,6 @@
                 </div>
             </div>
 
-            <!-- Pilot Test Callout Box -->
             <div class="pilot-banner">
                 <div class="pilot-info">
                     <h4>Pilot Test AI Fire Safety on 2 Cameras for 7 Days</h4>
@@ -1982,7 +2057,6 @@
             </div>
 
             <div class="services-grid">
-                <!-- 1. Turnkey Compliance Management -->
                 <div class="service-card">
                     <div class="service-icon purple">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -1995,7 +2069,6 @@
                     <p>Statutory liaisoning, consent renewals (CTE/CTO), hazardous waste filings (Form 4/5), and show-cause notice responses.</p>
                 </div>
 
-                <!-- 2. Water & Effluent Testing -->
                 <div class="service-card">
                     <div class="service-icon cyan">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -2007,7 +2080,6 @@
                     <p>NABL-calibrated parameter analysis (COD, BOD, TDS, TSS, Heavy metals) ensuring solid evidentiary compliance during inspections.</p>
                 </div>
 
-                <!-- 3. Fire Protection & System Installation -->
                 <div class="service-card">
                     <div class="service-icon pink">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -2018,7 +2090,6 @@
                     <p>Comprehensive fire safety audits, certified hydrant &amp; sprinkler network design, and statutory Fire NOC procurement.</p>
                 </div>
 
-                <!-- 4. Fire Safety AMC with Digital Logbook -->
                 <div class="service-card">
                     <div class="service-icon pink">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -2030,7 +2101,6 @@
                     <p>QR-code tagged maintenance contracts replacing physical registers with cloud-auditable records of pump and valve tests.</p>
                 </div>
 
-                <!-- 5. Thermal & Electrical Safety & Power Quality -->
                 <div class="service-card">
                     <div class="service-icon amber">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -2041,7 +2111,6 @@
                     <p>Level-3 thermography hotspot scanning, power harmonics analysis, and APFC optimization conducted during active production.</p>
                 </div>
 
-                <!-- 6. Electrical Safety AMC with Digital Logbook -->
                 <div class="service-card">
                     <div class="service-icon amber">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -2053,7 +2122,6 @@
                     <p>Preventative maintenance tracking and digital health records for switchgear, transformers, and distribution panels.</p>
                 </div>
 
-                <!-- 7. Industrial Safety Audit -->
                 <div class="service-card">
                     <div class="service-icon cyan">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -2065,7 +2133,6 @@
                     <p>Mandatory workplace reviews under the Factories Act: machine guarding, PPE compliance, and chemical handling hazard reduction.</p>
                 </div>
 
-                <!-- 8. Industrial Energy Audit & Efficiency Studies -->
                 <div class="service-card">
                     <div class="service-icon emerald">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -2076,7 +2143,6 @@
                     <p>BEE-standard plant audits identifying thermal heat losses, motor inefficiencies, and direct monthly electricity bill cuts.</p>
                 </div>
 
-                <!-- 9. Carbon Footprint & GHG Assessment -->
                 <div class="service-card">
                     <div class="service-icon emerald">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -2089,7 +2155,6 @@
                     <p>Scope 1, 2, and 3 emissions accounting, sustainability roadmaps, and baseline documentation required for export vendors.</p>
                 </div>
 
-                <!-- 10. Power Safety & Electrical Risk Assessment -->
                 <div class="service-card">
                     <div class="service-icon amber">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -2101,7 +2166,6 @@
                     <p>Arc-flash calculations, short-circuit validation, earth pit testing, and human contact protection audits.</p>
                 </div>
 
-                <!-- 11. Testing & Commissioning (Electrical & HVAC) -->
                 <div class="service-card">
                     <div class="service-icon blue">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -2112,7 +2176,6 @@
                     <p>Thermal duct balancing, CFM tests, smoke damper checks, and DG synchronization before facility handovers.</p>
                 </div>
 
-                <!-- 12. Building Energy Audit Services -->
                 <div class="service-card">
                     <div class="service-icon purple">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -2179,7 +2242,6 @@
                 </div>
             </div>
 
-            <!-- Right Terminal Interface Card -->
             <div class="telemetry-box">
                 <div class="telemetry-box-header">
                     <span class="telemetry-box-title">Active Plant Telemetry</span>
@@ -2221,7 +2283,6 @@
             </div>
 
             <div class="insights-grid">
-                <!-- Article Card 1 -->
                 <div class="insight-card">
                     <div class="card-image-wrapper">
                         <svg class="insight-icon flame" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -2236,7 +2297,6 @@
                     </div>
                 </div>
 
-                <!-- Article Card 2 -->
                 <div class="insight-card">
                     <div class="card-image-wrapper">
                         <svg class="insight-icon recycle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -2253,7 +2313,6 @@
                     </div>
                 </div>
 
-                <!-- Article Card 3 -->
                 <div class="insight-card">
                     <div class="card-image-wrapper">
                         <svg class="insight-icon bolt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -2281,7 +2340,6 @@
 
             <div class="logo-slider">
                 <div class="logo-track">
-                    <!-- Duplicate set of logos for infinite smooth scroll -->
                     <div class="logo-card"><span class="client-logo-text">TATA MOTORS</span></div>
                     <div class="logo-card"><span class="client-logo-text">RELIANCE</span></div>
                     <div class="logo-card"><span class="client-logo-text">L&amp;T INDUSTRIAL</span></div>
@@ -2290,7 +2348,6 @@
                     <div class="logo-card"><span class="client-logo-text">ITC LIMITED</span></div>
                     <div class="logo-card"><span class="client-logo-text">BPCL</span></div>
 
-                    <!-- Repeated set for seamless loop -->
                     <div class="logo-card"><span class="client-logo-text">TATA MOTORS</span></div>
                     <div class="logo-card"><span class="client-logo-text">RELIANCE</span></div>
                     <div class="logo-card"><span class="client-logo-text">L&amp;T INDUSTRIAL</span></div>
