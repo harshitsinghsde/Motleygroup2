@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motley Group - Effluent Treatment Plants (ETP) Manufacturer (Up to 5 MLD & Custom)</title>
+    <!-- Tailwind CSS CDN for modern and fast styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for industry and navigation icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandBlue: '#0f172a', /* Replaced brand blue with slate/black */
+                        brandLightBlue: '#f1f5f9', /* Replaced blue tint with light neutral gray */
+                        brandAccent: '#000000', /* Replaced accent blue with pure black */
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+    <!-- Hero Section with Enhanced Image Visibility -->
+    <section class="relative bg-cover bg-center bg-no-repeat py-16 md:py-24 border-b border-gray-200 bg-[url('ETP.png')]">
+        <!-- Lightened Gradient Overlay for high image visibility while maintaining readability -->
+        <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/55 to-black/30"></div>
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <div class="lg:col-span-7">
+                <h1 class="text-4xl lg:text-5xl font-black text-white tracking-tight leading-none mb-6">
+                    INDUSTRIAL EFFLUENT<br>TREATMENT PLANTS (ETP)
+                </h1>
+                <p class="text-lg text-gray-100 font-medium max-w-2xl drop-shadow">
+                    Empowering industries with sustainable, high-performance Wastewater Solutions. 
+                    From compact **10 KLD - 50 KLD** plants to massive high-capacity **120 KLD, 250 KLD up to 5 MLD (Million Liters/Day)** custom systems.
+                </p>
+                <div class="mt-8 flex flex-wrap gap-4">
+                    <a href="#etp-plants" class="bg-black hover:bg-gray-800 text-white px-8 py-3 rounded-lg font-bold transition shadow-md border border-gray-700">Our Plant Range</a>
+                    <a href="#quote" class="bg-white/20 backdrop-blur-md border-2 border-white text-white hover:bg-white hover:text-black px-8 py-3 rounded-lg font-bold transition">Send Capacity Enquiry</a>
+                </div>
+            </div>
+            <div class="lg:col-span-5 bg-white/95 backdrop-blur-md p-8 rounded-xl shadow-2xl border border-white/20">
+                <div class="flex items-center space-x-2 text-black mb-4">
+                    <span class="h-2 w-2 rounded-full bg-black animate-ping"></span>
+                    <span class="text-xs font-bold uppercase tracking-widest">Global Solutions</span>
+                </div>
+                <h3 class="text-2xl font-extrabold text-black mb-3">Capacity Up to 5 MLD</h3>
+                <p class="text-gray-600 mb-4 leading-relaxed text-sm">
+                    Motley Group is a powerhouse in wastewater treatment. We design, manufacture, and erect **10 KLD, 20 KLD, 50 KLD, 120 KLD, 250 KLD to 5 MLD** mega installations that meet strict environmental regulations & ensure Zero Liquid Discharge (ZLD).
+                </p>
+                <div class="grid grid-cols-2 gap-4 text-center">
+                    <div class="bg-gray-100 p-3 rounded">
+                        <span class="block text-xl font-bold text-black">10 KLD - 5 MLD</span>
+                        <span class="text-xs text-gray-500 font-semibold uppercase">Wide Capacity Range</span>
+                    </div>
+                    <div class="bg-gray-100 p-3 rounded">
+                        <span class="block text-xl font-bold text-black">Custom Specs</span>
+                        <span class="text-xs text-gray-500 font-semibold uppercase">Engineered to Order</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW SECTION 1: WHAT IS ETP & WHY IS IT NEEDED? -->
+    <section class="py-20 bg-white" id="about-etp">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Visual Left Area -->
+                <div class="relative">
+                    <div class="absolute -top-4 -left-4 w-72 h-72 bg-gray-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
+                    <div class="absolute -bottom-4 -right-4 w-72 h-72 bg-gray-300 rounded-full mix-blend-multiply filter blur-xl opacity-75 animate-blob animation-delay-2000"></div>
+                    <div class="relative bg-gray-50 p-8 rounded-2xl border border-gray-100 shadow-sm">
+                        <span class="text-amber-500 font-bold uppercase tracking-wider text-xs block mb-2">Industrial Knowledge</span>
+                        <h3 class="text-2xl font-black text-black mb-4">Briefly, What is an ETP?</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                            An <strong>Effluent Treatment Plant (ETP)</strong> is a specialized industrial wastewater treatment system designed to treat and purify highly contaminated industrial wastewater (known as effluent) before it is discharged back into the environment or reused within the factory.
+                        </p>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Industrial effluents contain hazardous pollutants, including heavy metals, oils, greases, toxic chemicals, high BOD (Biological Oxygen Demand), and high COD (Chemical Oxygen Demand). <strong>Without an ETP, discharging this untreated water severely destroys natural water resources, soil, and public health</strong>, leading to huge legal penalties.
+                        </p>
+                        <div class="mt-6 border-l-4 border-amber-500 pl-4 py-1 bg-amber-50 rounded-r">
+                            <span class="block text-xs font-bold text-amber-800 uppercase">Key Objective</span>
+                            <span class="text-sm text-gray-700">Transform complex toxic wastewater into compliant, reusable, or safely dischargeable water.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Features Right Area -->
+                <div>
+                    <h2 class="text-3xl lg:text-4xl font-extrabold text-black tracking-tight mb-4 uppercase">Why Do Industries Need an ETP?</h2>
+                    <p class="text-gray-500 text-sm mb-6">Implementing an Effluent Treatment Plant isn't just about compliance; it's a vital operation for modern-day industrial efficiency and planetary care.</p>
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-4">
+                            <div class="h-10 w-10 rounded-lg bg-green-100 text-green-700 flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="fa-solid fa-scale-balanced"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-extrabold text-black text-base">Regulatory Compliance</h4>
+                                <p class="text-gray-500 text-xs mt-1">Meet stringet state and central pollution control board (CPCB) standards to prevent closures and avoid fines.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="h-10 w-10 rounded-lg bg-gray-200 text-black flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="fa-solid fa-recycle"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-extrabold text-black text-base">Resource Recovery & Reuse</h4>
+                                <p class="text-gray-500 text-xs mt-1">Recycle up to 95% of industrial water back into factory processes, significantly saving freshwater costs.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="h-10 w-10 rounded-lg bg-red-100 text-red-700 flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="fa-solid fa-shield-halved"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-extrabold text-black text-base">Brand Value & Safety</h4>
+                                <p class="text-gray-500 text-xs mt-1">Create an eco-friendly and socially responsible brand while protecting your machinery from corroding due to bad water.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW SECTION 2: THE ETP TREATMENT PROCESS (HOW IT WORKS) -->
+    <section class="py-20 bg-gray-100 border-y border-gray-200" id="process">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-extrabold text-black uppercase tracking-tight">How ETP Processes Wastewater?</h2>
+                <div class="h-1 w-20 bg-amber-500 mx-auto mt-4 mb-3"></div>
+                <p class="text-gray-500 text-sm max-w-2xl mx-auto">An ETP converts raw, harmful effluent into clean water through 4 standard, highly engineered processing stages:</p>
+            </div>
+
+            <!-- Steps Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Stage 1 -->
+                <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-200 flex flex-col justify-between relative">
+                    <div class="absolute -top-4 -right-4 h-8 w-8 bg-amber-500 text-white font-extrabold rounded-full flex items-center justify-center shadow">1</div>
+                    <div>
+                        <div class="h-12 w-12 rounded-full bg-gray-100 text-black flex items-center justify-center text-xl mb-4">
+                            <i class="fa-solid fa-filter"></i>
+                        </div>
+                        <h4 class="text-lg font-extrabold text-black mb-2">Stage 01: Primary</h4>
+                        <p class="text-gray-500 text-xs leading-relaxed mb-4">
+                            <strong>Physical Treatment:</strong> Screeners filter out large debris like plastic, cloth, and stones. An oil and grease trap removes floating lipids. It then enters an Equalization and Neutralization Tank to balance erratic chemical loads and pH.
+                        </p>
+                    </div>
+                    <span class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Initial Screening & pH Balance</span>
+                </div>
+
+                <!-- Stage 2 -->
+                <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-200 flex flex-col justify-between relative">
+                    <div class="absolute -top-4 -right-4 h-8 w-8 bg-amber-500 text-white font-extrabold rounded-full flex items-center justify-center shadow">2</div>
+                    <div>
+                        <div class="h-12 w-12 rounded-full bg-gray-100 text-black flex items-center justify-center text-xl mb-4">
+                            <i class="fa-solid fa-bacteria"></i>
+                        </div>
+                        <h4 class="text-lg font-extrabold text-black mb-2">Stage 02: Secondary</h4>
+                        <p class="text-gray-500 text-xs leading-relaxed mb-4">
+                            <strong>Biological Treatment:</strong> Focuses on removing dissolved organic matters using microbes and oxygen in Aeration Tanks (MBBR, SBR, or ASP). Microorganisms naturally digest organic pollutants, forming sludge that settles in Clarifier tanks.
+                        </p>
+                    </div>
+                    <span class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">BOD & COD Biodegradation</span>
+                </div>
+
+                <!-- Stage 3 -->
+                <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-200 flex flex-col justify-between relative">
+                    <div class="absolute -top-4 -right-4 h-8 w-8 bg-amber-500 text-white font-extrabold rounded-full flex items-center justify-center shadow">3</div>
+                    <div>
+                        <div class="h-12 w-12 rounded-full bg-gray-100 text-black flex items-center justify-center text-xl mb-4">
+                            <i class="fa-solid fa-vials"></i>
+                        </div>
+                        <h4 class="text-lg font-extrabold text-black mb-2">Stage 03: Tertiary</h4>
+                        <p class="text-gray-500 text-xs leading-relaxed mb-4">
+                            <strong>Chemical & Physical Filtration:</strong> Fine particles and microbes are killed or removed via disinfection (Chlorination/Ozone) and passed through high-grade Pressure Sand Filters (PSF) and Activated Carbon Filters (ACF).
+                        </p>
+                    </div>
+                    <span class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Odor, Color & Microbe Removal</span>
+                </div>
+
+                <!-- Stage 4 -->
+                <div class="bg-white rounded-xl p-6 shadow-sm border border-black flex flex-col justify-between relative">
+                    <div class="absolute -top-4 -right-4 h-8 w-8 bg-black text-white font-extrabold rounded-full flex items-center justify-center shadow">4</div>
+                    <div>
+                        <div class="h-12 w-12 rounded-full bg-gray-100 text-black flex items-center justify-center text-xl mb-4">
+                            <i class="fa-solid fa-faucet-drip"></i>
+                        </div>
+                        <h4 class="text-lg font-extrabold text-black mb-2">Stage 04: Advanced (ZLD)</h4>
+                        <p class="text-gray-500 text-xs leading-relaxed mb-4">
+                            <strong>Resource Recovery:</strong> Water goes through membrane filtrations (Ultrafiltration, Reverse Osmosis (RO)), ending at Multi-Effect Evaporators (MEE) to extract absolutely pure water for factory reuse, leaving zero liquid waste.
+                        </p>
+                    </div>
+                    <span class="text-[10px] font-bold text-black uppercase tracking-widest">RO, UF & Zero Liquid Discharge</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Popular ETP Range -->
+    <section class="py-20" id="etp-plants">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl lg:text-4xl font-extrabold text-black uppercase tracking-tight">Our Popular ETP Range</h2>
+                <div class="h-1 w-20 bg-amber-500 mx-auto mt-4"></div>
+                <p class="text-gray-500 mt-3 max-w-xl mx-auto">Explore our robust, pre-engineered, and high-quality Effluent Treatment Plants designed for diverse operational footprints, scaling up to massive custom plants.</p>
+            </div>
+
+            <!-- ETP Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- 10 KLD Compact ETP -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition border border-gray-200 flex flex-col group">
+                    <div class="h-48 bg-gray-200 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=600&q=80" alt="10 KLD Compact ETP" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute top-4 left-4 bg-black text-white font-bold text-xs uppercase px-3 py-1.5 rounded">Skid-Mounted</div>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-lg font-extrabold text-black mb-2">10 KLD Compact ETP</h3>
+                            <p class="text-gray-500 text-xs mb-4 leading-relaxed">
+                                Ideal for small-scale operations, highly space-saving & skid-mounted for effortless mobility and seamless daily operations.
+                            </p>
+                        </div>
+                        <div>
+                            <ul class="text-xs space-y-1.5 text-gray-600 font-semibold mb-4">
+                                <li><i class="fa-solid fa-check text-green-500 mr-2"></i>Modular Plug & Play</li>
+                                <li><i class="fa-solid fa-check text-green-500 mr-2"></i>Commercial & Small Ind.</li>
+                                <li><i class="fa-solid fa-check text-green-500 mr-2"></i>Low Operational Cost</li>
+                            </ul>
+                            <a href="#quote" class="inline-block w-full text-center bg-black text-white font-bold py-2 rounded text-xs hover:bg-gray-800 transition">Enquire Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 20 KLD Packaged ETP -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition border border-gray-200 flex flex-col group">
+                    <div class="h-48 bg-gray-200 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1513828742140-ccaa34f32735?auto=format&fit=crop&w=600&q=80" alt="20 KLD Packaged ETP" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute top-4 left-4 bg-amber-500 text-white font-bold text-xs uppercase px-3 py-1.5 rounded">Standard Packaged</div>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-lg font-extrabold text-black mb-2">20 KLD Packaged ETP</h3>
+                            <p class="text-gray-500 text-xs mb-4 leading-relaxed">
+                                Robust, modern skid-mounted design using advanced filtration like Multi-grade filters & Carbon beds. Best for medium complexes.
+                            </p>
+                        </div>
+                        <div>
+                            <ul class="text-xs space-y-1.5 text-gray-600 font-semibold mb-4">
+                                <li><i class="fa-solid fa-check text-green-500 mr-2"></i>Advanced Filtration</li>
+                                <li><i class="fa-solid fa-check text-green-500 mr-2"></i>Pre-tested and Skid Mounted</li>
+                                <li><i class="fa-solid fa-check text-green-500 mr-2"></i>Optimal COD/BOD Removal</li>
+                            </ul>
+                            <a href="#quote" class="inline-block w-full text-center bg-black text-white font-bold py-2 rounded text-xs hover:bg-gray-800 transition">Enquire Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 50 KLD Industrial ETP -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition border border-gray-200 flex flex-col group">
+                    <div class="h-48 bg-gray-200 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=600&q=80" alt="50 KLD Industrial ETP" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute top-4 left-4 bg-red-600 text-white font-bold text-xs uppercase px-3 py-1.5 rounded">Medium Capacity</div>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-lg font-extrabold text-black mb-2">50 KLD Industrial ETP</h3>
+                            <p class="text-gray-500 text-xs mb-4 leading-relaxed">
+                                Heavy-duty, high capacity wastewater treatment system engineered for medium to large enterprises with intensive discharge needs.
+                            </p>
+                        </div>
+                        <div>
+                            <ul class="text-xs space-y-1.5 text-gray-600 font-semibold mb-4">
+                                <li><i class="fa-solid fa-check text-green-500 mr-2"></i>High volume capacity handling</li>
+                                <li><i class="fa-solid fa-check text-green-500 mr-2"></i>Biological Treatment (MBBR/SBR)</li>
+                                <li><i class="fa-solid fa-check text-green-500 mr-2"></i>Durable & Fully Compliant</li>
+                            </ul>
+                            <a href="#quote" class="inline-block w-full text-center bg-black text-white font-bold py-2 rounded text-xs hover:bg-gray-800 transition">Enquire Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mega Custom Projects KLD & MLD -->
+                <div class="bg-gradient-to-b from-gray-100 to-gray-200 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition border border-black flex flex-col group">
+                    <div class="h-48 bg-gray-200 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1581094719597-9007ab28cf8c?auto=format&fit=crop&w=600&q=80" alt="120 KLD - 5 MLD ETP Projects" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute top-4 left-4 bg-green-700 text-white font-bold text-xs uppercase px-3 py-1.5 rounded">Mega & Custom Scale</div>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-lg font-extrabold text-black mb-2">120KLD - 5MLD & Custom</h3>
+                            <p class="text-gray-500 text-xs mb-4 leading-relaxed">
+                                Huge scale environmental infrastructures spanning 120 KLD, 250 KLD to massive 5 MLD (Million Liters/Day) custom engineered to your layout.
+                            </p>
+                        </div>
+                        <div>
+                            <ul class="text-xs space-y-1.5 text-gray-600 font-semibold mb-4">
+                                <li><i class="fa-solid fa-check text-green-600 mr-2"></i>High-end industrial output</li>
+                                <li><i class="fa-solid fa-check text-green-600 mr-2"></i>Tailored ZLD / RO Technology</li>
+                                <li><i class="fa-solid fa-check text-green-600 mr-2"></i>End-to-End Civil & Erection</li>
+                            </ul>
+                            <a href="#quote" class="inline-block w-full text-center bg-amber-500 text-white font-bold py-2 rounded text-xs hover:bg-amber-600 transition">Request Custom Layout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW SECTION 3: HOW WE GIVE SOLUTIONS (OUR END-TO-END WORKFLOW) -->
+    <section class="bg-white py-20" id="solutions">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-amber-500 font-bold uppercase tracking-widest text-xs">A Trusted Lifecycle Partner</span>
+                <h2 class="text-3xl lg:text-4xl font-extrabold text-black uppercase tracking-tight mt-2">How We Give Solutions</h2>
+                <div class="h-1 w-20 bg-amber-500 mx-auto mt-4 mb-3"></div>
+                <p class="text-gray-500 text-sm max-w-2xl mx-auto">From conceptual design to continuous on-site maintenance, Motley Group ensures zero downtime and 100% regulatory compliance for your ETP project.</p>
+            </div>
+
+            <!-- Workflow timeline -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Step 1 -->
+                <div class="p-6 bg-gray-50 rounded-xl hover:shadow-md transition">
+                    <span class="text-4xl font-black text-amber-100 block mb-3">#01</span>
+                    <h4 class="text-lg font-bold text-black mb-2">Consultation & Sample Testing</h4>
+                    <p class="text-gray-500 text-xs leading-relaxed">
+                        We analyze your raw waste water characteristics in our advanced laboratories, evaluating BOD, COD, and chemical profiles to formulate the precise recipe.
+                    </p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="p-6 bg-gray-50 rounded-xl hover:shadow-md transition">
+                    <span class="text-4xl font-black text-amber-100 block mb-3">#02</span>
+                    <h4 class="text-lg font-bold text-black mb-2">Engineering & Custom Design</h4>
+                    <p class="text-gray-500 text-xs leading-relaxed">
+                        Our engineering team maps CAD drawings and 3D schematics tailored exactly to your factories' volumetric demand (10 KLD to 5 MLD) & on-premises layout.
+                    </p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="p-6 bg-gray-50 rounded-xl hover:shadow-md transition">
+                    <span class="text-4xl font-black text-amber-100 block mb-3">#03</span>
+                    <h4 class="text-lg font-bold text-black mb-2">Fabrication & Assembly</h4>
+                    <p class="text-gray-500 text-xs leading-relaxed">
+                        We fabricate modular skids, high-strength filters, reactors, electrical panels, and tanks at our facilities with precise, multi-layered quality checkups.
+                    </p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="p-6 bg-gray-50 rounded-xl hover:shadow-md transition">
+                    <span class="text-4xl font-black text-amber-100 block mb-3">#04</span>
+                    <h4 class="text-lg font-bold text-black mb-2">Erection & O&M Support</h4>
+                    <p class="text-gray-500 text-xs leading-relaxed">
+                        Post commissioning and pollution certification help, we take over operations & AMC (Annual Maintenance) ensuring you get uninterrupted performance.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industries We Serve Section -->
+    <section class="bg-gray-100 py-20" id="industries">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl lg:text-4xl font-extrabold text-black uppercase tracking-tight">Industries We Serve</h2>
+                <div class="h-1 w-20 bg-amber-500 mx-auto mt-4"></div>
+                <p class="text-gray-500 mt-3 max-w-lg mx-auto">Providing customized, robust effluent treatment solutions across several specialized industrial domains.</p>
+            </div>
+
+            <!-- Industries Grid Layout -->
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+                <!-- 1. Textile & Apparel -->
+                <div class="bg-white p-6 rounded-xl border border-gray-200 text-center flex flex-col items-center hover:-translate-y-1 transition duration-300">
+                    <div class="h-12 w-12 rounded-full bg-gray-100 text-black flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-shirt"></i>
+                    </div>
+                    <h4 class="font-extrabold text-sm text-black font-semibold">Textile & Apparel</h4>
+                </div>
+
+                <!-- 2. Pharmaceutical -->
+                <div class="bg-white p-6 rounded-xl border border-gray-200 text-center flex flex-col items-center hover:-translate-y-1 transition duration-300">
+                    <div class="h-12 w-12 rounded-full bg-gray-100 text-black flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-pills"></i>
+                    </div>
+                    <h4 class="font-extrabold text-sm text-black font-semibold">Pharmaceutical</h4>
+                </div>
+
+                <!-- 3. Chemical & Petrochemical -->
+                <div class="bg-white p-6 rounded-xl border border-gray-200 text-center flex flex-col items-center hover:-translate-y-1 transition duration-300">
+                    <div class="h-12 w-12 rounded-full bg-gray-100 text-black flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-flask-vial"></i>
+                    </div>
+                    <h4 class="font-extrabold text-sm text-black font-semibold">Chemical & Petrochemical</h4>
+                </div>
+
+                <!-- 4. Food & Beverage -->
+                <div class="bg-white p-6 rounded-xl border border-gray-200 text-center flex flex-col items-center hover:-translate-y-1 transition duration-300">
+                    <div class="h-12 w-12 rounded-full bg-gray-100 text-black flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-utensils"></i>
+                    </div>
+                    <h4 class="font-extrabold text-sm text-black font-semibold">Food & Beverage</h4>
+                </div>
+
+                <!-- 5. Automobile -->
+                <div class="bg-white p-6 rounded-xl border border-gray-200 text-center flex flex-col items-center hover:-translate-y-1 transition duration-300">
+                    <div class="h-12 w-12 rounded-full bg-gray-100 text-black flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-car-side"></i>
+                    </div>
+                    <h4 class="font-extrabold text-sm text-black font-semibold">Automobile</h4>
+                </div>
+
+                <!-- 6. Paper & Pulp -->
+                <div class="bg-white p-6 rounded-xl border border-gray-200 text-center flex flex-col items-center hover:-translate-y-1 transition duration-300">
+                    <div class="h-12 w-12 rounded-full bg-gray-100 text-black flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-newspaper"></i>
+                    </div>
+                    <h4 class="font-extrabold text-sm text-black font-semibold">Paper & Pulp</h4>
+                </div>
+
+                <!-- 7. Leather & Tanneries -->
+                <div class="bg-white p-6 rounded-xl border border-gray-200 text-center flex flex-col items-center hover:-translate-y-1 transition duration-300">
+                    <div class="h-12 w-12 rounded-full bg-gray-100 text-black flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-shoe-prints"></i>
+                    </div>
+                    <h4 class="font-extrabold text-sm text-black font-semibold">Leather & Tanneries</h4>
+                </div>
+
+                <!-- 8. Healthcare -->
+                <div class="bg-white p-6 rounded-xl border border-gray-200 text-center flex flex-col items-center hover:-translate-y-1 transition duration-300">
+                    <div class="h-12 w-12 rounded-full bg-gray-100 text-black flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-hospital"></i>
+                    </div>
+                    <h4 class="font-extrabold text-sm text-black font-semibold">Healthcare & Hospitals</h4>
+                </div>
+
+                <!-- 9. Power & Energy -->
+                <div class="bg-white p-6 rounded-xl border border-gray-200 text-center flex flex-col items-center hover:-translate-y-1 transition duration-300">
+                    <div class="h-12 w-12 rounded-full bg-gray-100 text-black flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+                    <h4 class="font-extrabold text-sm text-black font-semibold">Power & Energy</h4>
+                </div>
+
+                <!-- 10. FMCG & Cosmetics -->
+                <div class="bg-white p-6 rounded-xl border border-gray-200 text-center flex flex-col items-center hover:-translate-y-1 transition duration-300">
+                    <div class="h-12 w-12 rounded-full bg-gray-100 text-black flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-spray-can-sparkles"></i>
+                    </div>
+                    <h4 class="font-extrabold text-sm text-black font-semibold">FMCG & Cosmetics</h4>
+                </div>
+
+                <!-- 11. Distilleries & Sugar -->
+                <div class="bg-white p-6 rounded-xl border border-gray-200 text-center flex flex-col items-center hover:-translate-y-1 transition duration-300">
+                    <div class="h-12 w-12 rounded-full bg-gray-100 text-black flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-wheat-awn"></i>
+                    </div>
+                    <h4 class="font-extrabold text-sm text-black font-semibold">Distilleries & Sugar</h4>
+                </div>
+
+                <!-- 12. Infrastructure -->
+                <div class="bg-white p-6 rounded-xl border border-gray-200 text-center flex flex-col items-center hover:-translate-y-1 transition duration-300">
+                    <div class="h-12 w-12 rounded-full bg-gray-100 text-black flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-building-user"></i>
+                    </div>
+                    <h4 class="font-extrabold text-sm text-black font-semibold">Infrastructure & SEZs</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-gray-400 py-8 border-t border-gray-800 text-sm" id="contact">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between">
+            <p>&copy; 2026 Motley Group (Global Industrial Solutions). All rights reserved.</p>
+            <div class="flex space-x-6 mt-4 md:mt-0 font-medium">
+                <a href="#" class="hover:text-white transition">Privacy Policy</a>
+                <a href="#" class="hover:text-white transition">Terms of Service</a>
+                <a href="#" class="hover:text-white transition">Environmental Policy</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
