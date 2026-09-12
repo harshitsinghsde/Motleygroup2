@@ -1589,6 +1589,27 @@
             }
         }
 
+        @keyframes scrollPhotosReverse {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(calc(-50% - 14px));
+            }
+        }
+
+        .photo-track-hospitals {
+            display: flex;
+            gap: 28px;
+            width: max-content;
+            align-items: stretch;
+            animation: scrollPhotosReverse 34s linear infinite;
+        }
+
+        .photo-track-hospitals:hover {
+            animation-play-state: paused;
+        }
+
         .photo-card {
             background: #ffffff;
             border: 1px solid #cbd5e1;
@@ -1979,15 +2000,10 @@
                     </svg>
                 </a>
                 <ul class="dropdown-menu">
-                    <li><a href="STP.html">Sewage Treatment Plant <span class="item-arrow">&gt;</span></a></li>
-                    <li><a href="ETP.html">Effluent Treatment Plant <span class="item-arrow">&gt;</span></a></li>
-                    <li><a href="#products">Zero Liquid Discharge Plant <span class="item-arrow">&gt;</span></a></li>
-                    <li><a href="#products">RO Plant <span class="item-arrow">&gt;</span></a></li>
-                    <li><a href="#products">Waste Water Treatment Plant <span class="item-arrow">&gt;</span></a></li>
-                    <li><a href="#products">Softener Plant <span class="item-arrow">&gt;</span></a></li>
-                    <li><a href="#products">Water Treatment Plant <span class="item-arrow">&gt;</span></a></li>
-                    <li><a href="#products">SBR Sewage Treatment Plant <span class="item-arrow">&gt;</span></a></li>
-                    <li><a href="#products">MBR Sewage Treatment Plant <span class="item-arrow">&gt;</span></a></li>
+                    <li><a href="STP.html">Waste Water Treatment Plant <span class="item-arrow">&gt;</span></a></li>
+                    <li><a href="ETP.html">Water Treatment Plant <span class="item-arrow">&gt;</span></a></li>
+                    <li><a href="#products">Chemical Plant <span class="item-arrow">&gt;</span></a></li>
+
                 </ul>
             </li>
 
@@ -2026,8 +2042,6 @@
             </li>
             <li><a href="#blog">Blog</a></li>
             <li><a href="#clients">Clients</a></li>
-
-           
         </ul>
 
         <a href="mailto:contact@motleygroup.in" class="btn-audit">Book an<br>Audit</a>
@@ -2800,6 +2814,162 @@
                         <div class="photo-caption">
                             <span class="photo-name">Fortune Hotel</span>
                             <span class="photo-sub">Member ITC's Hotel Group</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HEALTHCARE & MEDICAL INFRASTRUCTURE PHOTOS SLIDESHOW SECTION -->
+    <section class="client-photos-section" id="healthcare-projects" style="background-color: #f8fafc; border-top: 1px solid var(--border-color);">
+        <div class="client-photos-container">
+            <div class="photos-header">
+                <span class="photos-tag">Healthcare &amp; Life Safety</span>
+                <h2 class="photos-title">Hospital &amp; Clinical Facilities Audited</h2>
+            </div>
+
+            <div class="photo-slider">
+                <div class="photo-track-hospitals">
+                    <!-- Group 1 -->
+                    <div class="photo-card">
+                        <div class="photo-image-wrapper">
+                            <img src="Family_Hospital_Kanpur.jpeg" alt="Family Hospital Kanpur">
+                        </div>
+                        <div class="photo-caption">
+                            <span class="photo-name">Family Hospital</span>
+                            <span class="photo-sub">Kanpur, UP</span>
+                        </div>
+                    </div>
+
+                    <div class="photo-card">
+                        <div class="photo-image-wrapper">
+                            <img src="SD_Hospital.jpeg" alt="SD Hospital - Saraswati Devi Medicare">
+                        </div>
+                        <div class="photo-caption">
+                            <span class="photo-name">SD Hospital</span>
+                            <span class="photo-sub">Saraswati Devi Medicare</span>
+                        </div>
+                    </div>
+
+                    <div class="photo-card">
+                        <div class="photo-image-wrapper">
+                            <img src="Rahi_Medical_Hospital.jpeg" alt="Rahi Medical Centre Hospital & Trauma Center">
+                        </div>
+                        <div class="photo-caption">
+                            <span class="photo-name">Rahi Medical Centre</span>
+                            <span class="photo-sub">Hospital &amp; Trauma Centre</span>
+                        </div>
+                    </div>
+
+                    <div class="photo-card">
+                        <div class="photo-image-wrapper">
+                            <img src="CP_Multispeciality_Hospital.jpeg" alt="CP Multispeciality Hospital">
+                        </div>
+                        <div class="photo-caption">
+                            <span class="photo-name">CP Multispeciality Hospital</span>
+                            <span class="photo-sub">Healthcare Facility</span>
+                        </div>
+                    </div>
+
+                    <div class="photo-card">
+                        <div class="photo-image-wrapper">
+                            <img src="Anjali_Hospital.jpeg" alt="Anjali Hospital">
+                        </div>
+                        <div class="photo-caption">
+                            <span class="photo-name">Anjali Hospital</span>
+                            <span class="photo-sub">Medical Care Center</span>
+                        </div>
+                    </div>
+
+                    <div class="photo-card">
+                        <div class="photo-image-wrapper">
+                            <img src="Aashriya_Hospital.jpeg" alt="Aashriya Hospital">
+                        </div>
+                        <div class="photo-caption">
+                            <span class="photo-name">Aashriya Hospital</span>
+                            <span class="photo-sub">Super Specialty Healthcare</span>
+                        </div>
+                    </div>
+
+                    <div class="photo-card">
+                        <div class="photo-image-wrapper">
+                            <img src="Chandrbhal_Hospital.jpeg" alt="Chandrabhal Hospital Trauma & Joint Care">
+                        </div>
+                        <div class="photo-caption">
+                            <span class="photo-name">Chandrabhal Hospital</span>
+                            <span class="photo-sub">Trauma &amp; Joint Care Centre</span>
+                        </div>
+                    </div>
+
+                    <!-- Duplicate Group for Seamless Infinite Loop -->
+                    <div class="photo-card">
+                        <div class="photo-image-wrapper">
+                            <img src="Family_Hospital_Kanpur.jpeg" alt="Family Hospital Kanpur">
+                        </div>
+                        <div class="photo-caption">
+                            <span class="photo-name">Family Hospital</span>
+                            <span class="photo-sub">Kanpur, UP</span>
+                        </div>
+                    </div>
+
+                    <div class="photo-card">
+                        <div class="photo-image-wrapper">
+                            <img src="SD_Hospital.jpeg" alt="SD Hospital - Saraswati Devi Medicare">
+                        </div>
+                        <div class="photo-caption">
+                            <span class="photo-name">SD Hospital</span>
+                            <span class="photo-sub">Saraswati Devi Medicare</span>
+                        </div>
+                    </div>
+
+                    <div class="photo-card">
+                        <div class="photo-image-wrapper">
+                            <img src="Rahi_Medical_Hospital.jpeg" alt="Rahi Medical Centre Hospital & Trauma Center">
+                        </div>
+                        <div class="photo-caption">
+                            <span class="photo-name">Rahi Medical Centre</span>
+                            <span class="photo-sub">Hospital &amp; Trauma Centre</span>
+                        </div>
+                    </div>
+
+                    <div class="photo-card">
+                        <div class="photo-image-wrapper">
+                            <img src="CP_Multispeciality_Hospital.jpeg" alt="CP Multispeciality Hospital">
+                        </div>
+                        <div class="photo-caption">
+                            <span class="photo-name">CP Multispeciality Hospital</span>
+                            <span class="photo-sub">Healthcare Facility</span>
+                        </div>
+                    </div>
+
+                    <div class="photo-card">
+                        <div class="photo-image-wrapper">
+                            <img src="Anjali_Hospital.jpeg" alt="Anjali Hospital">
+                        </div>
+                        <div class="photo-caption">
+                            <span class="photo-name">Anjali Hospital</span>
+                            <span class="photo-sub">Medical Care Center</span>
+                        </div>
+                    </div>
+
+                    <div class="photo-card">
+                        <div class="photo-image-wrapper">
+                            <img src="Aashriya_Hospital.jpeg" alt="Aashriya Hospital">
+                        </div>
+                        <div class="photo-caption">
+                            <span class="photo-name">Aashriya Hospital</span>
+                            <span class="photo-sub">Super Specialty Healthcare</span>
+                        </div>
+                    </div>
+
+                    <div class="photo-card">
+                        <div class="photo-image-wrapper">
+                            <img src="Chandrbhal_Hospital.jpeg" alt="Chandrabhal Hospital Trauma & Joint Care">
+                        </div>
+                        <div class="photo-caption">
+                            <span class="photo-name">Chandrabhal Hospital</span>
+                            <span class="photo-sub">Trauma &amp; Joint Care Centre</span>
                         </div>
                     </div>
                 </div>
